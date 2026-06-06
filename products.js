@@ -623,4 +623,23 @@ const PRODUCTS = [
   { id: 96, name: "HONDA 方向盤", category: "HONDA", brand: "煊怡車改", price: "NT$0", code: "HD-022", image: "images/honda-22.jpg", tags: ["新品"] },
   { id: 97, name: "HONDA 方向盤", category: "HONDA", brand: "煊怡車改", price: "NT$0", code: "HD-023", image: "images/honda-23.jpg", tags: ["新品"] },
   { id: 98, name: "HONDA 方向盤", category: "HONDA", brand: "煊怡車改", price: "NT$0", code: "HD-024", image: "images/honda-24.jpg", tags: ["新品"] },
+
+  // ==================== 馬自達 ====================
+  { id: 99, name: "馬自達 方向盤", category: "馬自達", brand: "煊怡車改", price: "NT$0", code: "MZ-001", image: "images/mazda-1.jpg", tags: ["新品"] },
+  { id: 100, name: "馬自達 方向盤", category: "馬自達", brand: "煊怡車改", price: "NT$0", code: "MZ-002", image: "images/mazda-2.jpg", tags: ["新品"] },
+  { id: 101, name: "馬自達 方向盤", category: "馬自達", brand: "煊怡車改", price: "NT$0", code: "MZ-003", image: "images/mazda-3.jpg", tags: ["新品"] },
+  { id: 102, name: "馬自達 方向盤", category: "馬自達", brand: "煊怡車改", price: "NT$0", code: "MZ-004", image: "images/mazda-4.jpg", tags: ["新品"] },
+  { id: 103, name: "馬自達 方向盤", category: "馬自達", brand: "煊怡車改", price: "NT$0", code: "MZ-005", image: "images/mazda-5.jpg", tags: ["新品"] },
+  { id: 104, name: "馬自達 方向盤", category: "馬自達", brand: "煊怡車改", price: "NT$0", code: "MZ-006", image: "images/mazda-6.jpg", tags: ["新品"] },
+  { id: 105, name: "馬自達 方向盤", category: "馬自達", brand: "煊怡車改", price: "NT$0", code: "MZ-007", image: "images/mazda-7.jpg", tags: ["新品"] },
+  { id: 106, name: "馬自達 方向盤", category: "馬自達", brand: "煊怡車改", price: "NT$0", code: "MZ-008", image: "images/mazda-8.jpg", tags: ["新品"] },
+  { id: 107, name: "馬自達 方向盤", category: "馬自達", brand: "煊怡車改", price: "NT$0", code: "MZ-009", image: "images/mazda-9.jpg", tags: ["新品"] },
+  { id: 108, name: "馬自達 方向盤", category: "馬自達", brand: "煊怡車改", price: "NT$0", code: "MZ-010", image: "images/mazda-10.jpg", tags: ["新品"] },
+  { id: 109, name: "馬自達 方向盤", category: "馬自達", brand: "煊怡車改", price: "NT$0", code: "MZ-011", image: "images/mazda-11.jpg", tags: ["新品"] },
+  { id: 110, name: "馬自達 方向盤", category: "馬自達", brand: "煊怡車改", price: "NT$0", code: "MZ-012", image: "images/mazda-12.jpg", tags: ["新品"] },
+  { id: 111, name: "馬自達 方向盤", category: "馬自達", brand: "煊怡車改", price: "NT$0", code: "MZ-013", image: "images/mazda-13.jpg", tags: ["新品"] },
+  { id: 112, name: "馬自達 方向盤", category: "馬自達", brand: "煊怡車改", price: "NT$0", code: "MZ-014", image: "images/mazda-14.jpg", tags: ["新品"] },
+  { id: 113, name: "馬自達 方向盤", category: "馬自達", brand: "煊怡車改", price: "NT$0", code: "MZ-015", image: "images/mazda-15.jpg", tags: ["新品"] },
+  { id: 114, name: "馬自達 方向盤", category: "馬自達", brand: "煊怡車改", price: "NT$0", code: "MZ-016", image: "images/mazda-16.jpg", tags: ["新品"] },
+  { id: 115, name: "馬自達 方向盤", category: "馬自達", brand: "煊怡車改", price: "NT$0", code: "MZ-017", image: "images/mazda-17.jpg", tags: ["新品"] },
 ];
