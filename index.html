@@ -1,0 +1,1105 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="精品商品目录 - 浏览我们的款式系列">
+  <!-- Open Graph (微信/社交分享) -->
+  <meta property="og:title" content="精品商品目录">
+  <meta property="og:description" content="浏览我们的最新款式，发现适合您的选择">
+  <meta property="og:image" content="images/og-cover.jpg">
+  <meta property="og:type" content="website">
+  <!-- 微信专用 -->
+  <meta itemprop="name" content="精品商品目录">
+  <meta itemprop="image" content="images/og-cover.jpg">
+  <title>精品商品目录</title>
+
+  <style>
+    /* ======== CSS变量 / 主题 ======== */
+    :root {
+      --color-primary: #2d2d2d;
+      --color-accent: #c9a96e;
+      --color-accent-light: #f5efe0;
+      --color-bg: #fafaf8;
+      --color-card-bg: #ffffff;
+      --color-text: #2d2d2d;
+      --color-text-light: #888888;
+      --color-border: #eeeeee;
+      --color-overlay: rgba(0,0,0,0.92);
+      --radius: 12px;
+      --radius-sm: 8px;
+      --shadow-card: 0 2px 16px rgba(0,0,0,0.06);
+      --shadow-card-hover: 0 8px 32px rgba(0,0,0,0.12);
+      --shadow-elevated: 0 4px 24px rgba(0,0,0,0.10);
+      --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+      --transition-fast: 0.15s ease;
+      --transition-normal: 0.3s ease;
+      --max-width: 1400px;
+    }
+
+    /* ======== Reset ======== */
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      -webkit-tap-highlight-color: transparent;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      background: var(--color-bg);
+      color: var(--color-text);
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* ======== 顶部导航 ======== */
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(250,250,248,0.85);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--color-border);
+      padding: 16px 24px;
+    }
+
+    .header-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      color: var(--color-primary);
+      white-space: nowrap;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .brand-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--color-accent);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    .search-wrap {
+      position: relative;
+      flex: 1;
+      max-width: 360px;
+    }
+
+    .search-input {
+      width: 100%;
+      padding: 10px 16px 10px 42px;
+      border: 1.5px solid var(--color-border);
+      border-radius: 50px;
+      font-size: 15px;
+      font-family: var(--font-sans);
+      background: var(--color-card-bg);
+      color: var(--color-text);
+      transition: all var(--transition-fast);
+      outline: none;
+    }
+
+    .search-input:focus {
+      border-color: var(--color-accent);
+      box-shadow: 0 0 0 3px var(--color-accent-light);
+    }
+
+    .search-input::placeholder {
+      color: var(--color-text-light);
+    }
+
+    .search-icon {
+      position: absolute;
+      left: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--color-text-light);
+      pointer-events: none;
+      font-size: 16px;
+    }
+
+    .result-count {
+      font-size: 13px;
+      color: var(--color-text-light);
+      white-space: nowrap;
+    }
+
+    /* ======== 分类标签 ======== */
+    .category-bar {
+      position: sticky;
+      top: 77px;
+      z-index: 99;
+      background: rgba(250,250,248,0.85);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--color-border);
+      padding: 0 24px;
+      overflow: hidden;
+    }
+
+    .category-scroll {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      display: flex;
+      gap: 0;
+      overflow-x: auto;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+      -webkit-overflow-scrolling: touch;
+      padding: 4px 0;
+    }
+
+    .category-scroll::-webkit-scrollbar {
+      display: none;
+    }
+
+    .category-tab {
+      flex-shrink: 0;
+      padding: 10px 20px;
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--color-text-light);
+      cursor: pointer;
+      border: none;
+      background: none;
+      font-family: var(--font-sans);
+      transition: all var(--transition-fast);
+      border-bottom: 2px solid transparent;
+      margin-bottom: -1px;
+      white-space: nowrap;
+      position: relative;
+    }
+
+    .category-tab:hover {
+      color: var(--color-text);
+    }
+
+    .category-tab.active {
+      color: var(--color-accent);
+      border-bottom-color: var(--color-accent);
+    }
+
+    .category-tab .count {
+      font-size: 11px;
+      margin-left: 2px;
+      opacity: 0.7;
+    }
+
+    /* ======== 主内容区 ======== */
+    .main {
+      flex: 1;
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 24px;
+      width: 100%;
+    }
+
+    /* 商品网格 */
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 24px;
+    }
+
+    /* 商品卡片 */
+    .product-card {
+      background: var(--color-card-bg);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow-card);
+      cursor: pointer;
+      transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+      will-change: transform;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .product-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-card-hover);
+    }
+
+    .product-card:active {
+      transform: scale(0.98);
+    }
+
+    /* 图片容器 */
+    .card-image-wrap {
+      position: relative;
+      width: 100%;
+      padding-top: 133%; /* 3:4 比例，适合服装展示 */
+      overflow: hidden;
+      background: #f0f0ee;
+    }
+
+    .card-image-wrap.landscape {
+      padding-top: 75%; /* 4:3 横版 */
+    }
+
+    .card-image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform var(--transition-normal);
+      background: #f0f0ee;
+    }
+
+    .product-card:hover .card-image {
+      transform: scale(1.05);
+    }
+
+    /* 图片加载前的占位 */
+    .card-image-placeholder {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #f5f4f0 0%, #eae8e0 100%);
+      color: #ccc;
+      font-size: 48px;
+    }
+
+    .card-image.loaded + .card-image-placeholder {
+      display: none;
+    }
+
+    /* 标签徽章 */
+    .card-badges {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      z-index: 2;
+      pointer-events: none;
+    }
+
+    .badge {
+      padding: 4px 10px;
+      font-size: 11px;
+      font-weight: 600;
+      border-radius: 50px;
+      letter-spacing: 0.5px;
+    }
+
+    .badge-new {
+      background: var(--color-accent);
+      color: #fff;
+    }
+
+    .badge-hot {
+      background: #e8543f;
+      color: #fff;
+    }
+
+    .badge-sale {
+      background: #2d2d2d;
+      color: #fff;
+    }
+
+    .badge-recommend {
+      background: #4a9e8f;
+      color: #fff;
+    }
+
+    /* 卡片文字区 */
+    .card-info {
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      flex: 1;
+    }
+
+    .card-name {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--color-text);
+      line-height: 1.4;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .card-category {
+      font-size: 12px;
+      color: var(--color-accent);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .card-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: auto;
+      gap: 10px;
+    }
+
+    .card-price {
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--color-text);
+    }
+
+    .card-code {
+      font-size: 11px;
+      color: var(--color-text-light);
+    }
+
+    /* 空状态 */
+    .empty-state {
+      text-align: center;
+      padding: 80px 20px;
+      grid-column: 1 / -1;
+    }
+
+    .empty-state-icon {
+      font-size: 64px;
+      margin-bottom: 16px;
+      opacity: 0.4;
+    }
+
+    .empty-state-title {
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--color-text);
+      margin-bottom: 8px;
+    }
+
+    .empty-state-desc {
+      font-size: 14px;
+      color: var(--color-text-light);
+    }
+
+    .empty-state-btn {
+      display: inline-block;
+      margin-top: 16px;
+      padding: 10px 28px;
+      background: var(--color-accent);
+      color: #fff;
+      border-radius: 50px;
+      cursor: pointer;
+      border: none;
+      font-size: 14px;
+      font-family: var(--font-sans);
+      transition: opacity var(--transition-fast);
+    }
+
+    .empty-state-btn:hover {
+      opacity: 0.85;
+    }
+
+    /* ======== 灯箱 ======== */
+    .lightbox {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 9999;
+      background: var(--color-overlay);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity var(--transition-normal);
+      -webkit-backdrop-filter: blur(10px);
+      backdrop-filter: blur(10px);
+    }
+
+    .lightbox.open {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .lightbox-content {
+      position: relative;
+      max-width: 90vw;
+      max-height: 90vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .lightbox-image-wrap {
+      position: relative;
+      max-width: 90vw;
+      max-height: 75vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .lightbox-image {
+      max-width: 90vw;
+      max-height: 75vh;
+      object-fit: contain;
+      border-radius: var(--radius-sm);
+      box-shadow: var(--shadow-elevated);
+      transition: opacity 0.2s ease;
+      user-select: none;
+      -webkit-user-drag: none;
+    }
+
+    .lightbox-image.switching {
+      opacity: 0;
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: 20px;
+      right: 24px;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.15);
+      border: none;
+      color: #fff;
+      font-size: 24px;
+      cursor: pointer;
+      z-index: 10001;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background var(--transition-fast);
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .lightbox-close:hover {
+      background: rgba(255,255,255,0.25);
+    }
+
+    .lightbox-nav {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.15);
+      border: none;
+      color: #fff;
+      font-size: 20px;
+      cursor: pointer;
+      z-index: 10001;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background var(--transition-fast);
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .lightbox-nav:hover {
+      background: rgba(255,255,255,0.3);
+    }
+
+    .lightbox-nav:active {
+      background: rgba(255,255,255,0.4);
+    }
+
+    .lightbox-prev {
+      left: 16px;
+    }
+
+    .lightbox-next {
+      right: 16px;
+    }
+
+    .lightbox-info {
+      text-align: center;
+      color: #fff;
+    }
+
+    .lightbox-name {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .lightbox-meta {
+      font-size: 13px;
+      opacity: 0.7;
+    }
+
+    .lightbox-counter {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: rgba(255,255,255,0.6);
+      font-size: 13px;
+      pointer-events: none;
+    }
+
+    /* 触摸提示 */
+    .swipe-hint {
+      display: none;
+      position: absolute;
+      bottom: 50px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: rgba(255,255,255,0.4);
+      font-size: 12px;
+      pointer-events: none;
+    }
+
+    @media (max-width: 640px) {
+      .swipe-hint { display: block; }
+      .lightbox-nav { display: none; }
+    }
+
+    /* ======== 页脚 ======== */
+    .footer {
+      border-top: 1px solid var(--color-border);
+      padding: 24px;
+      text-align: center;
+      font-size: 13px;
+      color: var(--color-text-light);
+      background: var(--color-card-bg);
+    }
+
+    .footer a {
+      color: var(--color-accent);
+      text-decoration: none;
+    }
+
+    /* ======== 响应式 ======== */
+    @media (max-width: 1024px) {
+      .product-grid {
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+        gap: 16px;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .header {
+        padding: 12px 16px;
+      }
+
+      .header-inner {
+        gap: 12px;
+      }
+
+      .brand {
+        font-size: 18px;
+      }
+
+      .brand-icon {
+        width: 34px;
+        height: 34px;
+        font-size: 15px;
+      }
+
+      .search-wrap {
+        max-width: none;
+      }
+
+      .search-input {
+        font-size: 14px;
+        padding: 8px 14px 8px 36px;
+      }
+
+      .result-count {
+        display: none;
+      }
+
+      .category-bar {
+        top: 61px;
+        padding: 0 12px;
+      }
+
+      .category-tab {
+        padding: 10px 14px;
+        font-size: 13px;
+      }
+
+      .main {
+        padding: 16px 12px;
+      }
+
+      .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+      }
+
+      .card-info {
+        padding: 12px;
+      }
+
+      .card-name {
+        font-size: 13px;
+      }
+
+      .card-price {
+        font-size: 15px;
+      }
+
+      .lightbox-close {
+        top: 12px;
+        right: 12px;
+        width: 38px;
+        height: 38px;
+        font-size: 20px;
+      }
+
+      .lightbox-name {
+        font-size: 16px;
+      }
+    }
+
+    @media (max-width: 380px) {
+      .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+      }
+
+      .card-info {
+        padding: 10px;
+      }
+
+      .card-name {
+        font-size: 12px;
+      }
+
+      .card-price {
+        font-size: 14px;
+      }
+    }
+
+    /* ======== 动画 ======== */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(16px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .product-card {
+      animation: fadeInUp 0.4s ease both;
+    }
+
+    /* 为每个卡片设置递增延迟 (通过JS动态设置) */
+  </style>
+</head>
+<body>
+
+  <!-- ===== 顶部导航 ===== -->
+  <header class="header">
+    <div class="header-inner">
+      <a class="brand" href="./">
+        <span class="brand-icon">品</span>
+        精品目录
+      </a>
+      <div class="search-wrap">
+        <span class="search-icon">🔍</span>
+        <input
+          type="text"
+          class="search-input"
+          id="searchInput"
+          placeholder="搜索款式名称..."
+          autocomplete="off"
+        >
+      </div>
+      <span class="result-count" id="resultCount"></span>
+    </div>
+  </header>
+
+  <!-- ===== 分类标签 ===== -->
+  <nav class="category-bar">
+    <div class="category-scroll" id="categoryBar">
+      <!-- JS动态生成 -->
+    </div>
+  </nav>
+
+  <!-- ===== 商品列表 ===== -->
+  <main class="main">
+    <div class="product-grid" id="productGrid">
+      <!-- JS动态生成 -->
+    </div>
+  </main>
+
+  <!-- ===== 页脚 ===== -->
+  <footer class="footer">
+    <p>© 2026 精品商品目录 · 如有疑问请联系我们</p>
+  </footer>
+
+  <!-- ===== 灯箱 ===== -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lightboxClose" aria-label="关闭">✕</button>
+    <button class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="上一张">◂</button>
+    <button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="下一张">▸</button>
+    <div class="lightbox-content">
+      <div class="lightbox-image-wrap">
+        <img class="lightbox-image" id="lightboxImage" src="" alt="" draggable="false">
+      </div>
+      <div class="lightbox-info">
+        <div class="lightbox-name" id="lightboxName"></div>
+        <div class="lightbox-meta" id="lightboxMeta"></div>
+      </div>
+    </div>
+    <div class="lightbox-counter" id="lightboxCounter"></div>
+    <div class="swipe-hint">← 左右滑动浏览 →</div>
+  </div>
+
+  <!-- ===== 加载商品数据 ===== -->
+  <script src="products.js"></script>
+
+  <script>
+    (function() {
+      // ======== 常量 ========
+      const ALL_CATEGORY = '全部';
+
+      // ======== DOM引用 ========
+      const searchInput = document.getElementById('searchInput');
+      const categoryBar = document.getElementById('categoryBar');
+      const productGrid = document.getElementById('productGrid');
+      const resultCount = document.getElementById('resultCount');
+      const lightbox = document.getElementById('lightbox');
+      const lightboxImage = document.getElementById('lightboxImage');
+      const lightboxName = document.getElementById('lightboxName');
+      const lightboxMeta = document.getElementById('lightboxMeta');
+      const lightboxCounter = document.getElementById('lightboxCounter');
+      const lightboxClose = document.getElementById('lightboxClose');
+      const lightboxPrev = document.getElementById('lightboxPrev');
+      const lightboxNext = document.getElementById('lightboxNext');
+
+      // ======== 状态 ========
+      let currentCategory = ALL_CATEGORY;
+      let currentSearch = '';
+      let currentLightboxIndex = -1;
+      let filteredProducts = [];
+      let touchStartX = 0;
+      let touchStartY = 0;
+
+      // ======== 初始化 ========
+      function init() {
+        if (typeof PRODUCTS === 'undefined') {
+          productGrid.innerHTML = `
+            <div class="empty-state">
+              <div class="empty-state-icon">📦</div>
+              <div class="empty-state-title">暂无商品数据</div>
+              <div class="empty-state-desc">请先配置 products.js 文件中的商品数据</div>
+            </div>
+          `;
+          return;
+        }
+
+        buildCategories();
+        applyFilters();
+        bindEvents();
+        loadCategoryFromHash();
+      }
+
+      // ======== 构建分类标签 ========
+      function buildCategories() {
+        const categories = [ALL_CATEGORY];
+        const catSet = new Set();
+        PRODUCTS.forEach(p => {
+          if (p.category && !catSet.has(p.category)) {
+            catSet.add(p.category);
+            categories.push(p.category);
+          }
+        });
+
+        categoryBar.innerHTML = categories.map(cat => {
+          const count = cat === ALL_CATEGORY
+            ? PRODUCTS.length
+            : PRODUCTS.filter(p => p.category === cat).length;
+          return `<button class="category-tab" data-category="${cat}">
+            ${cat}<span class="count">(${count})</span>
+          </button>`;
+        }).join('');
+
+        // 点击分类
+        categoryBar.querySelectorAll('.category-tab').forEach(tab => {
+          tab.addEventListener('click', () => {
+            currentCategory = tab.dataset.category;
+            currentSearch = '';
+            searchInput.value = '';
+            updateCategoryActive();
+            applyFilters();
+            updateHash();
+            // 滚动标签到可见
+            tab.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+          });
+        });
+
+        updateCategoryActive();
+      }
+
+      function updateCategoryActive() {
+        categoryBar.querySelectorAll('.category-tab').forEach(tab => {
+          tab.classList.toggle('active', tab.dataset.category === currentCategory);
+        });
+      }
+
+      // ======== 筛选 & 搜索 ========
+      function applyFilters() {
+        filteredProducts = PRODUCTS.filter(p => {
+          const matchCat = currentCategory === ALL_CATEGORY || p.category === currentCategory;
+          const matchSearch = !currentSearch ||
+            p.name.toLowerCase().includes(currentSearch.toLowerCase()) ||
+            (p.description && p.description.toLowerCase().includes(currentSearch.toLowerCase())) ||
+            (p.tags && p.tags.some(t => t.toLowerCase().includes(currentSearch.toLowerCase())));
+          return matchCat && matchSearch;
+        });
+
+        renderProducts();
+      }
+
+      // ======== 渲染商品 ========
+      function renderProducts() {
+        if (filteredProducts.length === 0) {
+          productGrid.innerHTML = `
+            <div class="empty-state">
+              <div class="empty-state-icon">🔍</div>
+              <div class="empty-state-title">没有找到匹配的商品</div>
+              <div class="empty-state-desc">试试更换分类或搜索其他关键词</div>
+              <button class="empty-state-btn" onclick="document.getElementById('searchInput').value='';document.querySelector('.category-tab[data-category=\\'全部\\']').click();">
+                查看全部商品
+              </button>
+            </div>
+          `;
+          resultCount.textContent = '';
+          return;
+        }
+
+        resultCount.textContent = `共 ${filteredProducts.length} 款`;
+
+        productGrid.innerHTML = filteredProducts.map((p, i) => {
+          const badges = (p.tags || []).map(tag => {
+            let cls = 'badge-recommend';
+            if (tag === '新品') cls = 'badge-new';
+            else if (tag === '热卖') cls = 'badge-hot';
+            else if (tag === '特价') cls = 'badge-sale';
+            return `<span class="badge ${cls}">${tag}</span>`;
+          }).join('');
+
+          return `
+            <div class="product-card" data-index="${i}" style="animation-delay:${Math.min(i * 0.03, 0.6)}s">
+              <div class="card-image-wrap">
+                ${badges ? `<div class="card-badges">${badges}</div>` : ''}
+                <img
+                  class="card-image"
+                  src="${p.image}"
+                  alt="${p.name}"
+                  loading="lazy"
+                  onload="this.classList.add('loaded')"
+                  onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
+                >
+                <div class="card-image-placeholder" style="display:none;">
+                  <span>📷</span>
+                </div>
+              </div>
+              <div class="card-info">
+                ${p.category ? `<div class="card-category">${p.category}</div>` : ''}
+                <div class="card-name">${p.name}</div>
+                <div class="card-bottom">
+                  ${p.price ? `<span class="card-price">${p.price}</span>` : '<span></span>'}
+                  ${p.code ? `<span class="card-code">${p.code}</span>` : ''}
+                </div>
+              </div>
+            </div>
+          `;
+        }).join('');
+
+        // 绑定卡片点击 → 打开灯箱
+        productGrid.querySelectorAll('.product-card').forEach(card => {
+          card.addEventListener('click', () => {
+            const idx = parseInt(card.dataset.index);
+            openLightbox(idx);
+          });
+        });
+      }
+
+      // ======== 灯箱 ========
+      function openLightbox(index) {
+        currentLightboxIndex = index;
+        updateLightboxContent();
+        lightbox.classList.add('open');
+        document.body.style.overflow = 'hidden';
+        updateLightboxCounter();
+      }
+
+      function closeLightbox() {
+        lightbox.classList.remove('open');
+        document.body.style.overflow = '';
+        currentLightboxIndex = -1;
+      }
+
+      function navigateLightbox(direction) {
+        if (filteredProducts.length === 0) return;
+        currentLightboxIndex = (currentLightboxIndex + direction + filteredProducts.length) % filteredProducts.length;
+        updateLightboxContent();
+        updateLightboxCounter();
+      }
+
+      function updateLightboxContent() {
+        const p = filteredProducts[currentLightboxIndex];
+        if (!p) return;
+
+        lightboxImage.classList.add('switching');
+        lightboxImage.src = p.image;
+        lightboxImage.alt = p.name;
+        lightboxName.textContent = p.name;
+        lightboxMeta.textContent = [p.category, p.price, p.code].filter(Boolean).join(' · ');
+      }
+
+      function updateLightboxCounter() {
+        lightboxCounter.textContent = `${currentLightboxIndex + 1} / ${filteredProducts.length}`;
+      }
+
+      // ======== URL Hash ========
+      function updateHash() {
+        if (currentCategory === ALL_CATEGORY && !currentSearch) {
+          history.replaceState(null, '', window.location.pathname);
+          return;
+        }
+        const params = new URLSearchParams();
+        if (currentCategory !== ALL_CATEGORY) params.set('cat', currentCategory);
+        if (currentSearch) params.set('q', currentSearch);
+        history.replaceState(null, '', '?' + params.toString());
+      }
+
+      function loadCategoryFromHash() {
+        const params = new URLSearchParams(window.location.search);
+        const cat = params.get('cat');
+        const q = params.get('q');
+        if (cat) {
+          currentCategory = cat;
+          updateCategoryActive();
+        }
+        if (q) {
+          currentSearch = q;
+          searchInput.value = q;
+        }
+        if (cat || q) {
+          applyFilters();
+        }
+      }
+
+      // ======== 事件绑定 ========
+      function bindEvents() {
+        // 搜索
+        let searchTimer;
+        searchInput.addEventListener('input', () => {
+          clearTimeout(searchTimer);
+          searchTimer = setTimeout(() => {
+            currentSearch = searchInput.value.trim();
+            applyFilters();
+            updateHash();
+          }, 250);
+        });
+
+        // 灯箱关闭
+        lightboxClose.addEventListener('click', closeLightbox);
+        lightbox.addEventListener('click', (e) => {
+          if (e.target === lightbox) closeLightbox();
+        });
+
+        // 灯箱导航
+        lightboxPrev.addEventListener('click', () => navigateLightbox(-1));
+        lightboxNext.addEventListener('click', () => navigateLightbox(1));
+
+        // 图片加载完成
+        lightboxImage.addEventListener('load', () => {
+          lightboxImage.classList.remove('switching');
+        });
+
+        // 键盘
+        document.addEventListener('keydown', (e) => {
+          if (!lightbox.classList.contains('open')) return;
+          switch (e.key) {
+            case 'Escape':
+              closeLightbox();
+              break;
+            case 'ArrowLeft':
+              navigateLightbox(-1);
+              break;
+            case 'ArrowRight':
+              navigateLightbox(1);
+              break;
+          }
+        });
+
+        // 触摸滑动（灯箱）
+        lightbox.addEventListener('touchstart', (e) => {
+          touchStartX = e.touches[0].clientX;
+          touchStartY = e.touches[0].clientY;
+        }, { passive: true });
+
+        lightbox.addEventListener('touchend', (e) => {
+          const dx = e.changedTouches[0].clientX - touchStartX;
+          const dy = e.changedTouches[0].clientY - touchStartY;
+
+          // 水平滑动 > 50px 且大于垂直滑动
+          if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy)) {
+            navigateLightbox(dx < 0 ? 1 : -1);
+          }
+        });
+
+        // 浏览器前进/后退
+        window.addEventListener('popstate', () => {
+          const params = new URLSearchParams(window.location.search);
+          currentCategory = params.get('cat') || ALL_CATEGORY;
+          currentSearch = params.get('q') || '';
+          searchInput.value = currentSearch;
+          updateCategoryActive();
+          applyFilters();
+        });
+      }
+
+      // ======== 启动 ========
+      init();
+
+    })();
+  </script>
+</body>
+</html>
