@@ -332,4 +332,96 @@ const PRODUCTS = [
     image: "images/31.jpg",
     tags: ["新品", "熱銷"]
   },
+
+  // ==================== BMW ====================
+  {
+    id: 32,
+    name: "BMW 方向盤",
+    category: "BMW",
+    brand: "煊怡車改",
+    price: "NT$0",
+    code: "BM-001",
+    image: "images/bmw-1.jpg",
+    tags: ["新品"]
+  },
+  {
+    id: 33,
+    name: "BMW 方向盤",
+    category: "BMW",
+    brand: "煊怡車改",
+    price: "NT$0",
+    code: "BM-002",
+    image: "images/bmw-2.jpg",
+    tags: ["新品"]
+  },
+  {
+    id: 34,
+    name: "BMW 方向盤",
+    category: "BMW",
+    brand: "煊怡車改",
+    price: "NT$0",
+    code: "BM-003",
+    image: "images/bmw-3.jpg",
+    tags: ["新品"]
+  },
+  {
+    id: 35,
+    name: "BMW 方向盤",
+    category: "BMW",
+    brand: "煊怡車改",
+    price: "NT$0",
+    code: "BM-004",
+    image: "images/bmw-4.jpg",
+    tags: ["新品"]
+  },
+  {
+    id: 36,
+    name: "BMW 方向盤",
+    category: "BMW",
+    brand: "煊怡車改",
+    price: "NT$0",
+    code: "BM-005",
+    image: "images/bmw-5.jpg",
+    tags: ["新品"]
+  },
+  {
+    id: 37,
+    name: "BMW 方向盤",
+    category: "BMW",
+    brand: "煊怡車改",
+    price: "NT$0",
+    code: "BM-006",
+    image: "images/bmw-6.png",
+    tags: ["新品"]
+  },
+  {
+    id: 38,
+    name: "BMW 方向盤",
+    category: "BMW",
+    brand: "煊怡車改",
+    price: "NT$0",
+    code: "BM-007",
+    image: "images/bmw-7.jpg",
+    tags: ["新品"]
+  },
+  {
+    id: 39,
+    name: "BMW 方向盤",
+    category: "BMW",
+    brand: "煊怡車改",
+    price: "NT$0",
+    code: "BM-008",
+    image: "images/bmw-8.jpg",
+    tags: ["新品"]
+  },
+  {
+    id: 40,
+    name: "BMW 方向盤",
+    category: "BMW",
+    brand: "煊怡車改",
+    price: "NT$0",
+    code: "BM-009",
+    image: "images/bmw-9.jpg",
+    tags: ["新品"]
+  },
 ];
