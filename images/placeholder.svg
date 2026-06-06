@@ -11,7 +11,7 @@
   </defs>
   <rect width="600" height="600" fill="url(#bg)"/>
 
-  <!-- 方向盘外圈 -->
+  <!-- 方向盤外圈 -->
   <circle cx="300" cy="280" r="170" fill="none" stroke="#333" stroke-width="28"/>
   <circle cx="300" cy="280" r="170" fill="none" stroke="#3a3a3a" stroke-width="24"/>
   <circle cx="300" cy="280" r="170" fill="none" stroke="#444" stroke-width="2" opacity="0.5"/>
@@ -34,7 +34,7 @@
   <!-- 中心品牌标识 -->
   <text x="300" y="286" text-anchor="middle" font-family="Arial Black,sans-serif" font-size="11" fill="#fff" font-weight="900" letter-spacing="1">STEER</text>
 
-  <!-- 碳纤维纹理线 -->
+  <!-- 碳纖維紋理線 -->
   <g opacity="0.06">
     <line x1="0" y1="60" x2="600" y2="60" stroke="#fff" stroke-width="0.5"/>
     <line x1="0" y1="120" x2="600" y2="120" stroke="#fff" stroke-width="0.5"/>
@@ -47,9 +47,9 @@
     <line x1="0" y1="540" x2="600" y2="540" stroke="#fff" stroke-width="0.5"/>
   </g>
 
-  <!-- 底部红色装饰线 -->
+  <!-- 底部紅色裝飾線 -->
   <rect x="0" y="590" width="600" height="10" fill="url(#accent)"/>
 
-  <!-- 替换提示 -->
+  <!-- 替換提示 -->
   <text x="300" y="550" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#555">REPLACE WITH YOUR STEERING WHEEL IMAGE</text>
 </svg>

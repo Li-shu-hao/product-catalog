@@ -1,19 +1,19 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh-TW">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="方向盘改装目录 - 精选赛车方向盘、碳纤维方向盘、真皮方向盘">
-  <meta property="og:title" content="方向盘改装目录">
-  <meta property="og:description" content="精选赛车方向盘、碳纤维方向盘、真皮方向盘，改装升级首选">
+  <meta name="description" content="方向盤改裝目錄 - 精選賽車方向盤、碳纖維方向盤、真皮方向盤">
+  <meta property="og:title" content="方向盤改裝目錄">
+  <meta property="og:description" content="精選賽車方向盤、碳纖維方向盤、真皮方向盤，改裝升級首選">
   <meta property="og:image" content="images/og-cover.jpg">
   <meta property="og:type" content="website">
-  <meta itemprop="name" content="方向盘改装目录">
+  <meta itemprop="name" content="方向盤改裝目錄">
   <meta itemprop="image" content="images/og-cover.jpg">
-  <title>方向盘改装目录 | Steering Wheel Catalog</title>
+  <title>方向盤改裝目錄 | Steering Wheel Catalog</title>
 
   <style>
-    /* ======== 汽配风主题变量 ======== */
+    /* ======== 汽配風主題變數 ======== */
     :root {
       --color-bg: #0b0b0b;
       --color-surface: #141414;
@@ -63,7 +63,7 @@
       flex-direction: column;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
-      /* 碳纤维纹理效果 */
+      /* 碳纖維紋理效果 */
       background-image:
         repeating-linear-gradient(
           90deg,
@@ -81,7 +81,7 @@
         );
     }
 
-    /* ======== 顶部导航 ======== */
+    /* ======== 頂部導覽 ======== */
     .header {
       position: sticky;
       top: 0;
@@ -92,7 +92,7 @@
       border-bottom: 1px solid var(--color-border);
     }
 
-    /* 顶部红色装饰线 */
+    /* 頂部紅色裝飾線 */
     .header::before {
       content: '';
       position: absolute;
@@ -215,7 +215,7 @@
       text-transform: uppercase;
     }
 
-    /* ======== 分类标签 ======== */
+    /* ======== 分類標籤 ======== */
     .category-bar {
       position: sticky;
       top: 79px;
@@ -273,7 +273,7 @@
       opacity: 0.5;
     }
 
-    /* ======== 主内容区 ======== */
+    /* ======== 主要內容區 ======== */
     .main {
       flex: 1;
       max-width: var(--max-width);
@@ -312,7 +312,7 @@
       transform: scale(0.98);
     }
 
-    /* 图片容器 */
+    /* 圖片容器 */
     .card-image-wrap {
       position: relative;
       width: 100%;
@@ -481,7 +481,7 @@
       letter-spacing: 1px;
     }
 
-    /* ======== 空状态 ======== */
+    /* ======== 空狀態 ======== */
     .empty-state {
       text-align: center;
       padding: 100px 20px;
@@ -527,7 +527,7 @@
       background: #ef4444;
     }
 
-    /* ======== 灯箱 ======== */
+    /* ======== 燈箱 ======== */
     .lightbox {
       position: fixed;
       top: 0;
@@ -670,7 +670,7 @@
       .lightbox-nav { display: none; }
     }
 
-    /* ======== 页脚 ======== */
+    /* ======== 頁腳 ======== */
     .footer {
       border-top: 1px solid var(--color-border);
       padding: 24px;
@@ -686,7 +686,7 @@
       font-weight: 600;
     }
 
-    /* ======== 响应式 ======== */
+    /* ======== 響應式 ======== */
     @media (max-width: 1024px) {
       .product-grid {
         grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
@@ -738,7 +738,7 @@
       .card-price { font-size: 15px; }
     }
 
-    /* ======== 动画 ======== */
+    /* ======== 動畫 ======== */
     @keyframes fadeInUp {
       from { opacity: 0; transform: translateY(20px); }
       to { opacity: 1; transform: translateY(0); }
@@ -748,7 +748,7 @@
       animation: fadeInUp 0.4s ease both;
     }
 
-    /* ======== 滚动条 ======== */
+    /* ======== 捲軸 ======== */
     ::-webkit-scrollbar { width: 6px; }
     ::-webkit-scrollbar-track { background: var(--color-bg); }
     ::-webkit-scrollbar-thumb { background: var(--color-border-light); border-radius: 3px; }
@@ -757,7 +757,7 @@
 </head>
 <body>
 
-  <!-- ===== 顶部导航 ===== -->
+  <!-- ===== 頂部導覽 ===== -->
   <header class="header">
     <div class="header-inner">
       <a class="brand" href="./">
@@ -770,13 +770,13 @@
       <div class="search-wrap">
         <span class="search-icon">⌕</span>
         <input type="text" class="search-input" id="searchInput"
-               placeholder="搜索方向盘型号..." autocomplete="off">
+               placeholder="搜尋方向盤型號..." autocomplete="off">
       </div>
       <span class="result-count" id="resultCount"></span>
     </div>
   </header>
 
-  <!-- ===== 分类标签 ===== -->
+  <!-- ===== 分類標籤 ===== -->
   <nav class="category-bar">
     <div class="category-scroll" id="categoryBar"></div>
   </nav>
@@ -786,12 +786,12 @@
     <div class="product-grid" id="productGrid"></div>
   </main>
 
-  <!-- ===== 页脚 ===== -->
+  <!-- ===== 頁腳 ===== -->
   <footer class="footer">
     <p><span class="footer-highlight">STEERHUB</span> Performance Steering Wheel Catalog · 2026</p>
   </footer>
 
-  <!-- ===== 灯箱 ===== -->
+  <!-- ===== 燈箱 ===== -->
   <div class="lightbox" id="lightbox">
     <button class="lightbox-close" id="lightboxClose">✕</button>
     <button class="lightbox-nav lightbox-prev" id="lightboxPrev">◀</button>
@@ -807,7 +807,7 @@
     <div class="swipe-hint">← SWIPE →</div>
   </div>
 
-  <!-- ===== 数据 & 脚本 ===== -->
+  <!-- ===== 資料 & 程式 ===== -->
   <script src="products.js"></script>
 
   <script>
@@ -833,7 +833,7 @@
 
       function init() {
         if (typeof PRODUCTS === 'undefined') {
-          productGrid.innerHTML = '<div class="empty-state"><div class="empty-state-icon">🏎</div><div class="empty-state-title">NO PRODUCTS</div><div class="empty-state-desc">请配置 products.js 中的商品数据</div></div>';
+          productGrid.innerHTML = '<div class="empty-state"><div class="empty-state-icon">🏎</div><div class="empty-state-title">NO PRODUCTS</div><div class="empty-state-desc">請設定 products.js 中的商品資料</div></div>';
           return;
         }
         buildCats();
@@ -883,7 +883,7 @@
 
       function render() {
         if (!filtered.length) {
-          productGrid.innerHTML = `<div class="empty-state"><div class="empty-state-icon">🔍</div><div class="empty-state-title">未找到匹配产品</div><div class="empty-state-desc">试试其他分类或关键词</div><button class="empty-state-btn" onclick="location.reload()">查看全部</button></div>`;
+          productGrid.innerHTML = `<div class="empty-state"><div class="empty-state-icon">🔍</div><div class="empty-state-title">未找到符合的商品</div><div class="empty-state-desc">試試其他分類或關鍵詞</div><button class="empty-state-btn" onclick="location.reload()">檢視全部</button></div>`;
           resultCount.textContent = '';
           return;
         }
@@ -892,9 +892,9 @@
         productGrid.innerHTML = filtered.map((p, i) => {
           const tags = (p.tags || []).map(t => {
             let cls = 'badge-new';
-            if (t === '热销') cls = 'badge-hot';
+            if (t === '熱銷') cls = 'badge-hot';
             else if (t === '限量') cls = 'badge-limited';
-            else if (t === '碳纤维') cls = 'badge-carbon';
+            else if (t === '碳纖維') cls = 'badge-carbon';
             return `<span class="badge ${cls}">${t}</span>`;
           }).join('');
 
