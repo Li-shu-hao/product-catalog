@@ -673,4 +673,17 @@ const PRODUCTS = [
   { id: 140, name: "INFINITI 方向盤", category: "INFINITI", brand: "煊怡車改", price: "NT$0", code: "IF-013", image: "images/infiniti-13.jpg", tags: ["新品"] },
   { id: 141, name: "INFINITI 方向盤", category: "INFINITI", brand: "煊怡車改", price: "NT$0", code: "IF-014", image: "images/infiniti-14.jpg", tags: ["新品"] },
   { id: 142, name: "INFINITI 方向盤", category: "INFINITI", brand: "煊怡車改", price: "NT$0", code: "IF-015", image: "images/infiniti-15.jpg", tags: ["新品"] },
+
+  // ==================== 瑪莎拉蒂 ====================
+  { id: 143, name: "瑪莎拉蒂 方向盤", category: "瑪莎拉蒂", brand: "煊怡車改", price: "NT$0", code: "MS-001", image: "images/maserati-1.jpg", tags: ["新品"] },
+  { id: 144, name: "瑪莎拉蒂 方向盤", category: "瑪莎拉蒂", brand: "煊怡車改", price: "NT$0", code: "MS-002", image: "images/maserati-2.jpg", tags: ["新品"] },
+  { id: 145, name: "瑪莎拉蒂 方向盤", category: "瑪莎拉蒂", brand: "煊怡車改", price: "NT$0", code: "MS-003", image: "images/maserati-3.jpg", tags: ["新品"] },
+  { id: 146, name: "瑪莎拉蒂 方向盤", category: "瑪莎拉蒂", brand: "煊怡車改", price: "NT$0", code: "MS-004", image: "images/maserati-4.jpg", tags: ["新品"] },
+  { id: 147, name: "瑪莎拉蒂 方向盤", category: "瑪莎拉蒂", brand: "煊怡車改", price: "NT$0", code: "MS-005", image: "images/maserati-5.jpg", tags: ["新品"] },
+  { id: 148, name: "瑪莎拉蒂 方向盤", category: "瑪莎拉蒂", brand: "煊怡車改", price: "NT$0", code: "MS-006", image: "images/maserati-6.jpg", tags: ["新品"] },
+  { id: 149, name: "瑪莎拉蒂 方向盤", category: "瑪莎拉蒂", brand: "煊怡車改", price: "NT$0", code: "MS-007", image: "images/maserati-7.jpg", tags: ["新品"] },
+  { id: 150, name: "瑪莎拉蒂 方向盤", category: "瑪莎拉蒂", brand: "煊怡車改", price: "NT$0", code: "MS-008", image: "images/maserati-8.jpg", tags: ["新品"] },
+  { id: 151, name: "瑪莎拉蒂 方向盤", category: "瑪莎拉蒂", brand: "煊怡車改", price: "NT$0", code: "MS-009", image: "images/maserati-9.jpg", tags: ["新品"] },
+  { id: 152, name: "瑪莎拉蒂 方向盤", category: "瑪莎拉蒂", brand: "煊怡車改", price: "NT$0", code: "MS-010", image: "images/maserati-10.jpg", tags: ["新品"] },
+  { id: 153, name: "瑪莎拉蒂 方向盤", category: "瑪莎拉蒂", brand: "煊怡車改", price: "NT$0", code: "MS-011", image: "images/maserati-11.jpg", tags: ["新品"] },
 ];
