@@ -686,4 +686,10 @@ const PRODUCTS = [
   { id: 151, name: "瑪莎拉蒂 方向盤", category: "瑪莎拉蒂", brand: "煊怡車改", price: "NT$0", code: "MS-009", image: "images/maserati-9.jpg", tags: ["新品"] },
   { id: 152, name: "瑪莎拉蒂 方向盤", category: "瑪莎拉蒂", brand: "煊怡車改", price: "NT$0", code: "MS-010", image: "images/maserati-10.jpg", tags: ["新品"] },
   { id: 153, name: "瑪莎拉蒂 方向盤", category: "瑪莎拉蒂", brand: "煊怡車改", price: "NT$0", code: "MS-011", image: "images/maserati-11.jpg", tags: ["新品"] },
+
+  // ==================== NISSAN ====================
+  { id: 154, name: "NISSAN 方向盤", category: "NISSAN", brand: "煊怡車改", price: "NT$0", code: "NS-001", image: "images/nissan-1.jpg", tags: ["新品"] },
+  { id: 155, name: "NISSAN 方向盤", category: "NISSAN", brand: "煊怡車改", price: "NT$0", code: "NS-002", image: "images/nissan-2.jpg", tags: ["新品"] },
+  { id: 156, name: "NISSAN 方向盤", category: "NISSAN", brand: "煊怡車改", price: "NT$0", code: "NS-003", image: "images/nissan-3.jpg", tags: ["新品"] },
+  { id: 157, name: "NISSAN 方向盤", category: "NISSAN", brand: "煊怡車改", price: "NT$0", code: "NS-004", image: "images/nissan-4.jpg", tags: ["新品"] },
 ];
