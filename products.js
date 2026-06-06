@@ -701,4 +701,12 @@ const PRODUCTS = [
   { id: 162, name: "三菱 方向盤", category: "三菱", brand: "煊怡車改", price: "NT$0", code: "SL-005", image: "images/mitsubishi-5.jpg", tags: ["新品"] },
   { id: 163, name: "三菱 方向盤", category: "三菱", brand: "煊怡車改", price: "NT$0", code: "SL-006", image: "images/mitsubishi-6.jpg", tags: ["新品"] },
   { id: 164, name: "三菱 方向盤", category: "三菱", brand: "煊怡車改", price: "NT$0", code: "SL-007", image: "images/mitsubishi-7.jpg", tags: ["新品"] },
+
+  // ==================== GOlf ====================
+  { id: 165, name: "Golf 方向盤", category: "Golf", brand: "煊怡車改", price: "NT$0", code: "GF-001", image: "images/golf-1.jpg", tags: ["新品"] },
+  { id: 166, name: "Golf 方向盤", category: "Golf", brand: "煊怡車改", price: "NT$0", code: "GF-002", image: "images/golf-2.jpg", tags: ["新品"] },
+  { id: 167, name: "Golf 方向盤", category: "Golf", brand: "煊怡車改", price: "NT$0", code: "GF-003", image: "images/golf-3.jpg", tags: ["新品"] },
+  { id: 168, name: "Golf 方向盤", category: "Golf", brand: "煊怡車改", price: "NT$0", code: "GF-004", image: "images/golf-4.jpg", tags: ["新品"] },
+  { id: 169, name: "Golf 方向盤", category: "Golf", brand: "煊怡車改", price: "NT$0", code: "GF-005", image: "images/golf-5.jpg", tags: ["新品"] },
+  { id: 170, name: "Golf 方向盤", category: "Golf", brand: "煊怡車改", price: "NT$0", code: "GF-006", image: "images/golf-6.jpg", tags: ["新品"] },
 ];
