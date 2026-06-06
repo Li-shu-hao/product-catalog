@@ -692,4 +692,13 @@ const PRODUCTS = [
   { id: 155, name: "NISSAN 方向盤", category: "NISSAN", brand: "煊怡車改", price: "NT$0", code: "NS-002", image: "images/nissan-2.jpg", tags: ["新品"] },
   { id: 156, name: "NISSAN 方向盤", category: "NISSAN", brand: "煊怡車改", price: "NT$0", code: "NS-003", image: "images/nissan-3.jpg", tags: ["新品"] },
   { id: 157, name: "NISSAN 方向盤", category: "NISSAN", brand: "煊怡車改", price: "NT$0", code: "NS-004", image: "images/nissan-4.jpg", tags: ["新品"] },
+
+  // ==================== 三菱 ====================
+  { id: 158, name: "三菱 方向盤", category: "三菱", brand: "煊怡車改", price: "NT$0", code: "SL-001", image: "images/mitsubishi-1.jpg", tags: ["新品"] },
+  { id: 159, name: "三菱 方向盤", category: "三菱", brand: "煊怡車改", price: "NT$0", code: "SL-002", image: "images/mitsubishi-2.jpg", tags: ["新品"] },
+  { id: 160, name: "三菱 方向盤", category: "三菱", brand: "煊怡車改", price: "NT$0", code: "SL-003", image: "images/mitsubishi-3.jpg", tags: ["新品"] },
+  { id: 161, name: "三菱 方向盤", category: "三菱", brand: "煊怡車改", price: "NT$0", code: "SL-004", image: "images/mitsubishi-4.jpg", tags: ["新品"] },
+  { id: 162, name: "三菱 方向盤", category: "三菱", brand: "煊怡車改", price: "NT$0", code: "SL-005", image: "images/mitsubishi-5.jpg", tags: ["新品"] },
+  { id: 163, name: "三菱 方向盤", category: "三菱", brand: "煊怡車改", price: "NT$0", code: "SL-006", image: "images/mitsubishi-6.jpg", tags: ["新品"] },
+  { id: 164, name: "三菱 方向盤", category: "三菱", brand: "煊怡車改", price: "NT$0", code: "SL-007", image: "images/mitsubishi-7.jpg", tags: ["新品"] },
 ];
