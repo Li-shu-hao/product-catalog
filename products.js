@@ -656,4 +656,21 @@ const PRODUCTS = [
   { id: 125, name: "奧迪 方向盤", category: "奧迪", brand: "煊怡車改", price: "NT$0", code: "AD-010", image: "images/audi-10.jpg", tags: ["新品"] },
   { id: 126, name: "奧迪 方向盤", category: "奧迪", brand: "煊怡車改", price: "NT$0", code: "AD-012", image: "images/audi-12.jpg", tags: ["新品"] },
   { id: 127, name: "奧迪 方向盤", category: "奧迪", brand: "煊怡車改", price: "NT$0", code: "AD-013", image: "images/audi-13.jpg", tags: ["新品"] },
+
+  // ==================== INFINITI ====================
+  { id: 128, name: "INFINITI 方向盤", category: "INFINITI", brand: "煊怡車改", price: "NT$0", code: "IF-001", image: "images/infiniti-1.jpg", tags: ["新品"] },
+  { id: 129, name: "INFINITI 方向盤", category: "INFINITI", brand: "煊怡車改", price: "NT$0", code: "IF-002", image: "images/infiniti-2.jpg", tags: ["新品"] },
+  { id: 130, name: "INFINITI 方向盤", category: "INFINITI", brand: "煊怡車改", price: "NT$0", code: "IF-003", image: "images/infiniti-3.jpg", tags: ["新品"] },
+  { id: 131, name: "INFINITI 方向盤", category: "INFINITI", brand: "煊怡車改", price: "NT$0", code: "IF-004", image: "images/infiniti-4.jpg", tags: ["新品"] },
+  { id: 132, name: "INFINITI 方向盤", category: "INFINITI", brand: "煊怡車改", price: "NT$0", code: "IF-005", image: "images/infiniti-5.jpg", tags: ["新品"] },
+  { id: 133, name: "INFINITI 方向盤", category: "INFINITI", brand: "煊怡車改", price: "NT$0", code: "IF-006", image: "images/infiniti-6.jpg", tags: ["新品"] },
+  { id: 134, name: "INFINITI 方向盤", category: "INFINITI", brand: "煊怡車改", price: "NT$0", code: "IF-007", image: "images/infiniti-7.jpg", tags: ["新品"] },
+  { id: 135, name: "INFINITI 方向盤", category: "INFINITI", brand: "煊怡車改", price: "NT$0", code: "IF-008", image: "images/infiniti-8.jpg", tags: ["新品"] },
+  { id: 136, name: "INFINITI 方向盤", category: "INFINITI", brand: "煊怡車改", price: "NT$0", code: "IF-009", image: "images/infiniti-9.jpg", tags: ["新品"] },
+  { id: 137, name: "INFINITI 方向盤", category: "INFINITI", brand: "煊怡車改", price: "NT$0", code: "IF-010", image: "images/infiniti-10.jpg", tags: ["新品"] },
+  { id: 138, name: "INFINITI 方向盤", category: "INFINITI", brand: "煊怡車改", price: "NT$0", code: "IF-011", image: "images/infiniti-11.jpg", tags: ["新品"] },
+  { id: 139, name: "INFINITI 方向盤", category: "INFINITI", brand: "煊怡車改", price: "NT$0", code: "IF-012", image: "images/infiniti-12.jpg", tags: ["新品"] },
+  { id: 140, name: "INFINITI 方向盤", category: "INFINITI", brand: "煊怡車改", price: "NT$0", code: "IF-013", image: "images/infiniti-13.jpg", tags: ["新品"] },
+  { id: 141, name: "INFINITI 方向盤", category: "INFINITI", brand: "煊怡車改", price: "NT$0", code: "IF-014", image: "images/infiniti-14.jpg", tags: ["新品"] },
+  { id: 142, name: "INFINITI 方向盤", category: "INFINITI", brand: "煊怡車改", price: "NT$0", code: "IF-015", image: "images/infiniti-15.jpg", tags: ["新品"] },
 ];
