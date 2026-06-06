@@ -576,4 +576,25 @@ const PRODUCTS = [
     image: "images/benz-15.jpg",
     tags: ["新品"]
   },
+
+  // ==================== 福特 ====================
+  { id: 56, name: "福特 方向盤", category: "福特", brand: "煊怡車改", price: "NT$0", code: "FD-001", image: "images/ford-1.jpg", tags: ["新品"] },
+  { id: 57, name: "福特 方向盤", category: "福特", brand: "煊怡車改", price: "NT$0", code: "FD-002", image: "images/ford-2.jpg", tags: ["新品"] },
+  { id: 58, name: "福特 方向盤", category: "福特", brand: "煊怡車改", price: "NT$0", code: "FD-003", image: "images/ford-3.jpg", tags: ["新品"] },
+  { id: 59, name: "福特 方向盤", category: "福特", brand: "煊怡車改", price: "NT$0", code: "FD-004", image: "images/ford-4.jpg", tags: ["新品"] },
+  { id: 60, name: "福特 方向盤", category: "福特", brand: "煊怡車改", price: "NT$0", code: "FD-005", image: "images/ford-5.jpg", tags: ["新品"] },
+  { id: 61, name: "福特 方向盤", category: "福特", brand: "煊怡車改", price: "NT$0", code: "FD-006", image: "images/ford-6.jpg", tags: ["新品"] },
+  { id: 62, name: "福特 方向盤", category: "福特", brand: "煊怡車改", price: "NT$0", code: "FD-007", image: "images/ford-7.jpg", tags: ["新品"] },
+  { id: 63, name: "福特 方向盤", category: "福特", brand: "煊怡車改", price: "NT$0", code: "FD-008", image: "images/ford-8.jpg", tags: ["新品"] },
+  { id: 64, name: "福特 方向盤", category: "福特", brand: "煊怡車改", price: "NT$0", code: "FD-009", image: "images/ford-9.jpg", tags: ["新品"] },
+  { id: 65, name: "福特 方向盤", category: "福特", brand: "煊怡車改", price: "NT$0", code: "FD-010", image: "images/ford-10.jpg", tags: ["新品"] },
+  { id: 66, name: "福特 方向盤", category: "福特", brand: "煊怡車改", price: "NT$0", code: "FD-011", image: "images/ford-11.jpg", tags: ["新品"] },
+  { id: 67, name: "福特 方向盤", category: "福特", brand: "煊怡車改", price: "NT$0", code: "FD-012", image: "images/ford-12.jpg", tags: ["新品"] },
+  { id: 68, name: "福特 方向盤", category: "福特", brand: "煊怡車改", price: "NT$0", code: "FD-013", image: "images/ford-13.jpg", tags: ["新品"] },
+  { id: 69, name: "福特 方向盤", category: "福特", brand: "煊怡車改", price: "NT$0", code: "FD-014", image: "images/ford-14.jpg", tags: ["新品"] },
+  { id: 70, name: "福特 方向盤", category: "福特", brand: "煊怡車改", price: "NT$0", code: "FD-015", image: "images/ford-15.jpg", tags: ["新品"] },
+  { id: 71, name: "福特 方向盤", category: "福特", brand: "煊怡車改", price: "NT$0", code: "FD-016", image: "images/ford-16.jpg", tags: ["新品"] },
+  { id: 72, name: "福特 方向盤", category: "福特", brand: "煊怡車改", price: "NT$0", code: "FD-017", image: "images/ford-17.jpg", tags: ["新品"] },
+  { id: 73, name: "福特 方向盤", category: "福特", brand: "煊怡車改", price: "NT$0", code: "FD-018", image: "images/ford-18.jpg", tags: ["新品"] },
+  { id: 74, name: "福特 方向盤", category: "福特", brand: "煊怡車改", price: "NT$0", code: "FD-019", image: "images/ford-19.jpg", tags: ["新品"] },
 ];
