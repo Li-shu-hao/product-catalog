@@ -229,7 +229,7 @@ const PRODUCTS = [
     brand: "煊怡車改",
     price: "NT$0",
     code: "TY-021",
-    image: "images/e144750522bebe70bea396bc8a73f5e4.jpg",
+    image: "images/21.jpg",
     tags: ["新品"]
   },
   {
@@ -239,7 +239,7 @@ const PRODUCTS = [
     brand: "煊怡車改",
     price: "NT$0",
     code: "TY-022",
-    image: "images/e48b8d9123b28e121e916a91e57a2ee2.jpg",
+    image: "images/22.jpg",
     tags: ["新品"]
   },
   {
@@ -249,7 +249,7 @@ const PRODUCTS = [
     brand: "煊怡車改",
     price: "NT$0",
     code: "TY-023",
-    image: "images/e66952c01d645ed726bfdce3f0a3fa9c.jpg",
+    image: "images/23.jpg",
     tags: ["新品"]
   },
   {
@@ -259,7 +259,7 @@ const PRODUCTS = [
     brand: "煊怡車改",
     price: "NT$0",
     code: "TY-024",
-    image: "images/e8dfd11e21f6d8ee00823d98f4754555.jpg",
+    image: "images/24.jpg",
     tags: ["新品"]
   },
   {
@@ -269,7 +269,7 @@ const PRODUCTS = [
     brand: "煊怡車改",
     price: "NT$0",
     code: "TY-025",
-    image: "images/e946825d17be8373decd41163fb43e6c.jpg",
+    image: "images/25.jpg",
     tags: ["新品"]
   },
   {
@@ -279,7 +279,7 @@ const PRODUCTS = [
     brand: "煊怡車改",
     price: "NT$0",
     code: "TY-026",
-    image: "images/eabfd0ac0803b96f6b9e859f1f8ab56a.jpg",
+    image: "images/26.jpg",
     tags: ["新品"]
   },
   {
@@ -289,7 +289,7 @@ const PRODUCTS = [
     brand: "煊怡車改",
     price: "NT$0",
     code: "TY-027",
-    image: "images/f80613371bbebf4dc61b29bc5be79f02.jpg",
+    image: "images/27.jpg",
     tags: ["新品"]
   },
   {
@@ -299,7 +299,7 @@ const PRODUCTS = [
     brand: "煊怡車改",
     price: "NT$0",
     code: "TY-028",
-    image: "images/fdf0a856bfc416413b2a44944c81fa25.jpg",
+    image: "images/28.jpg",
     tags: ["新品"]
   },
   {
@@ -309,7 +309,7 @@ const PRODUCTS = [
     brand: "煊怡車改",
     price: "NT$0",
     code: "TY-GR01",
-    image: "images/豐田GR方向盤客制.jpg",
+    image: "images/29.jpg",
     tags: ["碳纖維", "熱銷"]
   },
   {
@@ -319,7 +319,7 @@ const PRODUCTS = [
     brand: "煊怡車改",
     price: "NT$0",
     code: "TY-ZC01",
-    image: "images/豐田方向盤總成.jpg",
+    image: "images/30.jpg",
     tags: ["熱銷"]
   },
   {
@@ -329,7 +329,7 @@ const PRODUCTS = [
     brand: "煊怡車改",
     price: "NT$0",
     code: "TY-FJ01",
-    image: "images/豐田飛機款方向盤.jpg",
+    image: "images/31.jpg",
     tags: ["新品", "熱銷"]
   },
 ];
