@@ -424,4 +424,156 @@ const PRODUCTS = [
     image: "images/bmw-9.jpg",
     tags: ["新品"]
   },
+
+  // ==================== 賓士 ====================
+  {
+    id: 41,
+    name: "賓士 方向盤",
+    category: "賓士",
+    brand: "煊怡車改",
+    price: "NT$0",
+    code: "BZ-001",
+    image: "images/benz-1.jpg",
+    tags: ["新品"]
+  },
+  {
+    id: 42,
+    name: "賓士 方向盤",
+    category: "賓士",
+    brand: "煊怡車改",
+    price: "NT$0",
+    code: "BZ-002",
+    image: "images/benz-2.jpg",
+    tags: ["新品"]
+  },
+  {
+    id: 43,
+    name: "賓士 方向盤",
+    category: "賓士",
+    brand: "煊怡車改",
+    price: "NT$0",
+    code: "BZ-003",
+    image: "images/benz-3.jpg",
+    tags: ["新品"]
+  },
+  {
+    id: 44,
+    name: "賓士 方向盤",
+    category: "賓士",
+    brand: "煊怡車改",
+    price: "NT$0",
+    code: "BZ-004",
+    image: "images/benz-4.jpg",
+    tags: ["新品"]
+  },
+  {
+    id: 45,
+    name: "賓士 方向盤",
+    category: "賓士",
+    brand: "煊怡車改",
+    price: "NT$0",
+    code: "BZ-005",
+    image: "images/benz-5.jpg",
+    tags: ["新品"]
+  },
+  {
+    id: 46,
+    name: "賓士 方向盤",
+    category: "賓士",
+    brand: "煊怡車改",
+    price: "NT$0",
+    code: "BZ-006",
+    image: "images/benz-6.jpg",
+    tags: ["新品"]
+  },
+  {
+    id: 47,
+    name: "賓士 方向盤",
+    category: "賓士",
+    brand: "煊怡車改",
+    price: "NT$0",
+    code: "BZ-007",
+    image: "images/benz-7.jpg",
+    tags: ["新品"]
+  },
+  {
+    id: 48,
+    name: "賓士 方向盤",
+    category: "賓士",
+    brand: "煊怡車改",
+    price: "NT$0",
+    code: "BZ-008",
+    image: "images/benz-8.jpg",
+    tags: ["新品"]
+  },
+  {
+    id: 49,
+    name: "賓士 方向盤",
+    category: "賓士",
+    brand: "煊怡車改",
+    price: "NT$0",
+    code: "BZ-009",
+    image: "images/benz-9.jpg",
+    tags: ["新品"]
+  },
+  {
+    id: 50,
+    name: "賓士 方向盤",
+    category: "賓士",
+    brand: "煊怡車改",
+    price: "NT$0",
+    code: "BZ-010",
+    image: "images/benz-10.jpg",
+    tags: ["新品"]
+  },
+  {
+    id: 51,
+    name: "賓士 方向盤",
+    category: "賓士",
+    brand: "煊怡車改",
+    price: "NT$0",
+    code: "BZ-011",
+    image: "images/benz-11.jpg",
+    tags: ["新品"]
+  },
+  {
+    id: 52,
+    name: "賓士 方向盤",
+    category: "賓士",
+    brand: "煊怡車改",
+    price: "NT$0",
+    code: "BZ-012",
+    image: "images/benz-12.jpg",
+    tags: ["新品"]
+  },
+  {
+    id: 53,
+    name: "賓士 方向盤",
+    category: "賓士",
+    brand: "煊怡車改",
+    price: "NT$0",
+    code: "BZ-013",
+    image: "images/benz-13.jpg",
+    tags: ["新品"]
+  },
+  {
+    id: 54,
+    name: "賓士 方向盤",
+    category: "賓士",
+    brand: "煊怡車改",
+    price: "NT$0",
+    code: "BZ-014",
+    image: "images/benz-14.jpg",
+    tags: ["新品"]
+  },
+  {
+    id: 55,
+    name: "賓士 方向盤",
+    category: "賓士",
+    brand: "煊怡車改",
+    price: "NT$0",
+    code: "BZ-015",
+    image: "images/benz-15.jpg",
+    tags: ["新品"]
+  },
 ];
