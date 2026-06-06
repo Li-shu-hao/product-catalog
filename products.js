@@ -20,20 +20,316 @@
  */
 
 const PRODUCTS = [
-  // 👇 請在此處添加你的商品，格式如下：
 
-  // {
-  //   id: 1,
-  //   name: "商品名稱",
-  //   category: "品牌分類",
-  //   brand: "煊怡車改",
-  //   material: "碳纖維 / 真皮",
-  //   price: "NT$0",
-  //   code: "貨號",
-  //   image: "images/你的圖片.jpg",
-  //   desc: "描述",
-  //   specs: ["規格1", "規格2"],
-  //   tags: ["新品", "熱銷"]
-  // },
-
+  // ==================== TOYOTA ====================
+  {
+    id: 1,
+    name: "TOYOTA 方向盤",
+    category: "TOYOTA",
+    brand: "煊怡車改",
+    price: "NT$0",
+    code: "TY-001",
+    image: "images/1.jpg",
+    tags: ["新品"]
+  },
+  {
+    id: 2,
+    name: "TOYOTA 方向盤",
+    category: "TOYOTA",
+    brand: "煊怡車改",
+    price: "NT$0",
+    code: "TY-002",
+    image: "images/2.jpg",
+    tags: ["新品"]
+  },
+  {
+    id: 3,
+    name: "TOYOTA 方向盤",
+    category: "TOYOTA",
+    brand: "煊怡車改",
+    price: "NT$0",
+    code: "TY-003",
+    image: "images/3.jpg",
+    tags: ["新品"]
+  },
+  {
+    id: 4,
+    name: "TOYOTA 方向盤",
+    category: "TOYOTA",
+    brand: "煊怡車改",
+    price: "NT$0",
+    code: "TY-004",
+    image: "images/4.jpg",
+    tags: ["新品"]
+  },
+  {
+    id: 5,
+    name: "TOYOTA 方向盤",
+    category: "TOYOTA",
+    brand: "煊怡車改",
+    price: "NT$0",
+    code: "TY-005",
+    image: "images/5.jpg",
+    tags: ["新品"]
+  },
+  {
+    id: 6,
+    name: "TOYOTA 方向盤",
+    category: "TOYOTA",
+    brand: "煊怡車改",
+    price: "NT$0",
+    code: "TY-006",
+    image: "images/6.jpg",
+    tags: ["新品"]
+  },
+  {
+    id: 7,
+    name: "TOYOTA 方向盤",
+    category: "TOYOTA",
+    brand: "煊怡車改",
+    price: "NT$0",
+    code: "TY-007",
+    image: "images/7.jpg",
+    tags: ["新品"]
+  },
+  {
+    id: 8,
+    name: "TOYOTA 方向盤",
+    category: "TOYOTA",
+    brand: "煊怡車改",
+    price: "NT$0",
+    code: "TY-008",
+    image: "images/8.jpg",
+    tags: ["新品"]
+  },
+  {
+    id: 9,
+    name: "TOYOTA 方向盤",
+    category: "TOYOTA",
+    brand: "煊怡車改",
+    price: "NT$0",
+    code: "TY-009",
+    image: "images/9.jpg",
+    tags: ["新品"]
+  },
+  {
+    id: 10,
+    name: "TOYOTA 方向盤",
+    category: "TOYOTA",
+    brand: "煊怡車改",
+    price: "NT$0",
+    code: "TY-010",
+    image: "images/10.jpg",
+    tags: ["新品"]
+  },
+  {
+    id: 11,
+    name: "TOYOTA 方向盤",
+    category: "TOYOTA",
+    brand: "煊怡車改",
+    price: "NT$0",
+    code: "TY-011",
+    image: "images/11.jpg",
+    tags: ["新品"]
+  },
+  {
+    id: 12,
+    name: "TOYOTA 方向盤",
+    category: "TOYOTA",
+    brand: "煊怡車改",
+    price: "NT$0",
+    code: "TY-012",
+    image: "images/12.jpg",
+    tags: ["新品"]
+  },
+  {
+    id: 13,
+    name: "TOYOTA 方向盤",
+    category: "TOYOTA",
+    brand: "煊怡車改",
+    price: "NT$0",
+    code: "TY-013",
+    image: "images/13.jpg",
+    tags: ["新品"]
+  },
+  {
+    id: 14,
+    name: "TOYOTA 方向盤",
+    category: "TOYOTA",
+    brand: "煊怡車改",
+    price: "NT$0",
+    code: "TY-014",
+    image: "images/14.jpg",
+    tags: ["新品"]
+  },
+  {
+    id: 15,
+    name: "TOYOTA 方向盤",
+    category: "TOYOTA",
+    brand: "煊怡車改",
+    price: "NT$0",
+    code: "TY-015",
+    image: "images/15.jpg",
+    tags: ["新品"]
+  },
+  {
+    id: 16,
+    name: "TOYOTA 方向盤",
+    category: "TOYOTA",
+    brand: "煊怡車改",
+    price: "NT$0",
+    code: "TY-016",
+    image: "images/16.jpg",
+    tags: ["新品"]
+  },
+  {
+    id: 17,
+    name: "TOYOTA 方向盤",
+    category: "TOYOTA",
+    brand: "煊怡車改",
+    price: "NT$0",
+    code: "TY-017",
+    image: "images/17.jpg",
+    tags: ["新品"]
+  },
+  {
+    id: 18,
+    name: "TOYOTA 方向盤",
+    category: "TOYOTA",
+    brand: "煊怡車改",
+    price: "NT$0",
+    code: "TY-018",
+    image: "images/18.jpg",
+    tags: ["新品"]
+  },
+  {
+    id: 19,
+    name: "TOYOTA 方向盤",
+    category: "TOYOTA",
+    brand: "煊怡車改",
+    price: "NT$0",
+    code: "TY-019",
+    image: "images/19.jpg",
+    tags: ["新品"]
+  },
+  {
+    id: 20,
+    name: "TOYOTA 方向盤",
+    category: "TOYOTA",
+    brand: "煊怡車改",
+    price: "NT$0",
+    code: "TY-020",
+    image: "images/20.jpg",
+    tags: ["新品"]
+  },
+  {
+    id: 21,
+    name: "TOYOTA 方向盤",
+    category: "TOYOTA",
+    brand: "煊怡車改",
+    price: "NT$0",
+    code: "TY-021",
+    image: "images/e144750522bebe70bea396bc8a73f5e4.jpg",
+    tags: ["新品"]
+  },
+  {
+    id: 22,
+    name: "TOYOTA 方向盤",
+    category: "TOYOTA",
+    brand: "煊怡車改",
+    price: "NT$0",
+    code: "TY-022",
+    image: "images/e48b8d9123b28e121e916a91e57a2ee2.jpg",
+    tags: ["新品"]
+  },
+  {
+    id: 23,
+    name: "TOYOTA 方向盤",
+    category: "TOYOTA",
+    brand: "煊怡車改",
+    price: "NT$0",
+    code: "TY-023",
+    image: "images/e66952c01d645ed726bfdce3f0a3fa9c.jpg",
+    tags: ["新品"]
+  },
+  {
+    id: 24,
+    name: "TOYOTA 方向盤",
+    category: "TOYOTA",
+    brand: "煊怡車改",
+    price: "NT$0",
+    code: "TY-024",
+    image: "images/e8dfd11e21f6d8ee00823d98f4754555.jpg",
+    tags: ["新品"]
+  },
+  {
+    id: 25,
+    name: "TOYOTA 方向盤",
+    category: "TOYOTA",
+    brand: "煊怡車改",
+    price: "NT$0",
+    code: "TY-025",
+    image: "images/e946825d17be8373decd41163fb43e6c.jpg",
+    tags: ["新品"]
+  },
+  {
+    id: 26,
+    name: "TOYOTA 方向盤",
+    category: "TOYOTA",
+    brand: "煊怡車改",
+    price: "NT$0",
+    code: "TY-026",
+    image: "images/eabfd0ac0803b96f6b9e859f1f8ab56a.jpg",
+    tags: ["新品"]
+  },
+  {
+    id: 27,
+    name: "TOYOTA 方向盤",
+    category: "TOYOTA",
+    brand: "煊怡車改",
+    price: "NT$0",
+    code: "TY-027",
+    image: "images/f80613371bbebf4dc61b29bc5be79f02.jpg",
+    tags: ["新品"]
+  },
+  {
+    id: 28,
+    name: "TOYOTA 方向盤",
+    category: "TOYOTA",
+    brand: "煊怡車改",
+    price: "NT$0",
+    code: "TY-028",
+    image: "images/fdf0a856bfc416413b2a44944c81fa25.jpg",
+    tags: ["新品"]
+  },
+  {
+    id: 29,
+    name: "豐田 GR 方向盤客製",
+    category: "TOYOTA",
+    brand: "煊怡車改",
+    price: "NT$0",
+    code: "TY-GR01",
+    image: "images/豐田GR方向盤客制.jpg",
+    tags: ["碳纖維", "熱銷"]
+  },
+  {
+    id: 30,
+    name: "豐田方向盤總成",
+    category: "TOYOTA",
+    brand: "煊怡車改",
+    price: "NT$0",
+    code: "TY-ZC01",
+    image: "images/豐田方向盤總成.jpg",
+    tags: ["熱銷"]
+  },
+  {
+    id: 31,
+    name: "豐田飛機款方向盤",
+    category: "TOYOTA",
+    brand: "煊怡車改",
+    price: "NT$0",
+    code: "TY-FJ01",
+    image: "images/豐田飛機款方向盤.jpg",
+    tags: ["新品", "熱銷"]
+  },
 ];
