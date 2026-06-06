@@ -4,407 +4,430 @@
  * ============================================
  *
  * 欄位說明：
- *   id       - 唯一编号
- *   name     - 产品名称
- *   category - 分類
- *   brand    - 品牌（可选）
- *   material - 材質（可选）：碳纖維 / 真皮 / Alcantara / PU / 鍛造碳纖維
- *   price    - 價格（可选）
- *   code     - 型號/貨號（可选）
+ *   id       - 唯一編號
+ *   name     - 產品名稱
+ *   category - 品牌分類
+ *   brand    - 品牌
+ *   material - 材質（可選）
+ *   price    - 價格（可選）
+ *   code     - 型號/貨號（可選）
  *   image    - 圖片路徑
- *   desc     - 描述（可选，用于搜索）
- *   specs    - 規格亮點陣列（可选）
- *   tags     - 標籤陣列（可选）：新品 熱銷 限量 碳纖維
+ *   desc     - 描述（可選，用於搜尋）
+ *   specs    - 規格亮點陣列（可選）
+ *   tags     - 標籤陣列（可選）：新品 熱銷 限量 碳纖維
  *
- * 图片放在 images/ 文件夹，替換占位图即可上线
+ * 圖片放在 images/ 資料夾，替換即可上線
  */
 
 const PRODUCTS = [
 
-  // ==================== 碳纖維方向盤 ====================
+  // ==================== TOYOTA ====================
   {
     id: 1001,
-    name: "全碳纖維 D 形競技方向盤",
-    category: "碳纖維",
+    name: "TOYOTA Altis / Cross 碳纖維運動方向盤",
+    category: "TOYOTA",
     brand: "煊怡車改",
-    material: "碳纖維",
-    price: "¥3,980",
-    code: "SH-CF-D01",
+    material: "碳纖維 / 真皮",
+    price: "NT$12,800",
+    code: "XY-TY-CF01",
     image: "images/placeholder.svg",
-    desc: "F1 風格 D 形平底設計，3K 斜纹碳纖維，鍛造鋁合金骨架",
-    specs: ["D形平底", "3K碳纖維", "鍛造铝骨架", "350mm"],
-    tags: ["碳纖維", "熱銷"]
+    desc: "TOYOTA Altis、Corolla Cross 專用，碳纖維+真皮混搭，D形平底設計",
+    specs: ["D形平底", "碳纖維飾板", "真皮握把", "Altis/Cross專用"],
+    tags: ["熱銷"]
   },
   {
     id: 1002,
-    name: "碳纖維 + Alcantara 混搭運動盘",
-    category: "碳纖維",
+    name: "TOYOTA RAV4 / Camry 真皮運動方向盤",
+    category: "TOYOTA",
     brand: "煊怡車改",
-    material: "碳纖維 / Alcantara",
-    price: "¥4,580",
-    code: "SH-CF-AL02",
+    material: "Nappa真皮",
+    price: "NT$10,800",
+    code: "XY-TY-LT02",
     image: "images/placeholder.svg",
-    desc: "12点钟方向碳纖維饰条，左右手握区 Alcantara 包裹",
-    specs: ["圆盘造型", "碳纖維+Alcantara", "365mm", "红色缝线"],
-    tags: ["碳纖維", "新品"]
+    desc: "RAV4、Camry 專車專用，Nappa真皮手工縫製，保留原廠加熱功能",
+    specs: ["Nappa真皮", "手工縫線", "加熱功能", "RAV4/Camry專用"],
+    tags: ["熱銷", "新品"]
   },
   {
     id: 1003,
-    name: "消光碳纖維賽道版方向盤",
-    category: "碳纖維",
+    name: "TOYOTA GR Supra 賽車碳纖維方向盤",
+    category: "TOYOTA",
     brand: "煊怡車改",
-    material: "碳纖維",
-    price: "¥5,200",
-    code: "SH-CF-MT03",
+    material: "碳纖維 / Alcantara",
+    price: "NT$18,800",
+    code: "XY-TY-GR03",
     image: "images/placeholder.svg",
-    desc: "全消光碳纖維，賽道级轻量化，仅重 1.2kg",
-    specs: ["消光纹路", "1.2kg超轻", "330mm", "賽道專用"],
+    desc: "GR Supra / GR Yaris 專用，全碳纖維主體，Alcantara握把，賽道級",
+    specs: ["全碳纖維", "Alcantara", "賽道級", "GR系列專用"],
     tags: ["碳纖維", "限量"]
   },
-  {
-    id: 1004,
-    name: "鍛造碳纖維運動方向盤",
-    category: "碳纖維",
-    brand: "煊怡車改",
-    material: "鍛造碳纖維",
-    price: "¥6,880",
-    code: "SH-FC-04",
-    image: "images/placeholder.svg",
-    desc: "大理石纹鍛造碳纖維，每支纹理独一无二，超轻量化",
-    specs: ["鍛造碳纖維", "大理石纹", "专属纹理", "1.05kg"],
-    tags: ["碳纖維", "限量", "新品"]
-  },
-  {
-    id: 1005,
-    name: "碳纖維 LED 競技方向盤",
-    category: "碳纖維",
-    brand: "煊怡車改",
-    material: "碳纖維",
-    price: "¥7,990",
-    code: "SH-CF-LED05",
-    image: "images/placeholder.svg",
-    desc: "内置 RPM 換檔提示灯，碳纖維主体，F1 賽道血统",
-    specs: ["LED转速灯", "碳纖維", "D形", "OLED显示屏"],
-    tags: ["碳纖維", "熱銷", "新品"]
-  },
-  {
-    id: 1006,
-    name: "碳纖維復古三辐方向盤",
-    category: "碳纖維",
-    brand: "煊怡車改",
-    material: "碳纖維 / 真皮",
-    price: "¥3,680",
-    code: "SH-CF-RT06",
-    image: "images/placeholder.svg",
-    desc: "復古三辐造型结合现代碳纖維工藝，握把真皮包裹",
-    specs: ["三辐復古", "碳纖維辐条", "真皮包裹", "380mm"],
-    tags: ["碳纖維"]
-  },
 
-  // ==================== 真皮方向盤 ====================
+  // ==================== BMW ====================
   {
     id: 2001,
-    name: "Nappa 真皮運動方向盤",
-    category: "真皮",
+    name: "BMW 3/5 系 M-Sport 碳纖維方向盤",
+    category: "BMW",
     brand: "煊怡車改",
-    material: "Nappa真皮",
-    price: "¥2,580",
-    code: "SH-LT-NP01",
+    material: "碳纖維 / Nappa真皮",
+    price: "NT$22,800",
+    code: "XY-BM-MS01",
     image: "images/placeholder.svg",
-    desc: "進口 Nappa 头层皮，手工缝制，细腻手感",
-    specs: ["Nappa真皮", "手工缝线", "370mm", "加热功能"],
-    tags: ["熱銷"]
+    desc: "BMW 3系/5系 F30/G20/G30 專用，M三色縫線，碳纖維飾板",
+    specs: ["M三色縫線", "碳纖維飾板", "Nappa真皮", "保留原廠功能"],
+    tags: ["碳纖維", "熱銷"]
   },
   {
     id: 2002,
-    name: "打孔真皮 D 形方向盤",
-    category: "真皮",
+    name: "BMW M3/M4 賽道版 Alcantara 方向盤",
+    category: "BMW",
     brand: "煊怡車改",
-    material: "打孔真皮",
-    price: "¥2,280",
-    code: "SH-LT-D02",
+    material: "Alcantara / 碳纖維",
+    price: "NT$28,800",
+    code: "XY-BM-MP02",
     image: "images/placeholder.svg",
-    desc: "運動 D 形設計，握把处打孔真皮，透气防滑",
-    specs: ["D形平底", "打孔真皮", "紅色回正標", "365mm"],
-    tags: ["熱銷", "新品"]
+    desc: "M3/M4 專用賽道版，全Alcantara包裹，碳纖維飾板，競技快拆接口",
+    specs: ["全Alcantara", "碳纖維飾板", "快拆接口", "M3/M4專用"],
+    tags: ["碳纖維", "限量", "熱銷"]
   },
   {
     id: 2003,
-    name: "義大利進口小牛皮方向盤",
-    category: "真皮",
+    name: "BMW X5/X6 豪華真皮方向盤",
+    category: "BMW",
     brand: "煊怡車改",
-    material: "義大利小牛皮",
-    price: "¥3,980",
-    code: "SH-LT-IT03",
+    material: "Nappa真皮",
+    price: "NT$19,800",
+    code: "XY-BM-X503",
     image: "images/placeholder.svg",
-    desc: "義大利植鞣小牛皮，復古做旧工藝，顶级质感",
-    specs: ["義大利小牛皮", "植鞣工藝", "380mm", "復古缝线"],
-    tags: ["限量"]
-  },
-  {
-    id: 2004,
-    name: "双色拼接真皮運動盘",
-    category: "真皮",
-    brand: "煊怡車改",
-    material: "真皮拼接",
-    price: "¥2,880",
-    code: "SH-LT-DC04",
-    image: "images/placeholder.svg",
-    desc: "黑白双色真皮拼接，運動感十足，适合改裝風格",
-    specs: ["双色拼接", "真皮+Alcantara", "D形", "对比色缝线"],
+    desc: "X5/X6/X7 專用，義大利Nappa真皮，加熱功能，豪華升級首選",
+    specs: ["Nappa真皮", "加熱功能", "豪華縫線", "X5/X6/X7專用"],
     tags: ["新品"]
   },
-  {
-    id: 2005,
-    name: "Alcantara 全包裹運動方向盤",
-    category: "真皮",
-    brand: "煊怡車改",
-    material: "Alcantara",
-    price: "¥3,280",
-    code: "SH-AL-05",
-    image: "images/placeholder.svg",
-    desc: "全 Alcantara 翻毛皮包裹，賽車级防滑，手感极佳",
-    specs: ["全Alcantara", "防滑处理", "355mm", "賽道级"],
-    tags: ["熱銷"]
-  },
-  {
-    id: 2006,
-    name: "平底真皮碳纖維混搭盘",
-    category: "真皮",
-    brand: "煊怡車改",
-    material: "真皮 / 碳纖維",
-    price: "¥3,680",
-    code: "SH-LT-CF06",
-    image: "images/placeholder.svg",
-    desc: "上下碳纖維饰板，左右真皮手握区，兼顾颜值与手感",
-    specs: ["碳纖維饰板", "真皮握把", "D形", "360mm"],
-    tags: ["熱銷", "碳纖維"]
-  },
 
-  // ==================== 賽車方向盤 ====================
+  // ==================== 賓士 ====================
   {
     id: 3001,
-    name: "F1 方程式賽道方向盤",
-    category: "賽車",
+    name: "賓士 C/E/S-Class AMG 碳纖維方向盤",
+    category: "賓士",
     brand: "煊怡車改",
-    material: "碳纖維 / Alcantara",
-    price: "¥12,800",
-    code: "SH-RC-F101",
+    material: "碳纖維 / Nappa真皮",
+    price: "NT$25,800",
+    code: "XY-BZ-AM01",
     image: "images/placeholder.svg",
-    desc: "F1 方程式造型，集成按钮面板，賽道專用快拆底座",
-    specs: ["F1造型", "集成按钮", "快拆底座", "280mm"],
-    tags: ["限量", "碳纖維"]
+    desc: "C/E/S-Class W205/W213/W222 專用，AMG風格，碳纖維+Nappa真皮",
+    specs: ["AMG風格", "碳纖維飾板", "Nappa真皮", "OLED顯示屏"],
+    tags: ["碳纖維", "熱銷"]
   },
   {
     id: 3002,
-    name: "GT 賽車深凹運動方向盤",
-    category: "賽車",
+    name: "賓士 GLC/GLE 運動平底方向盤",
+    category: "賓士",
     brand: "煊怡車改",
-    material: "Alcantara",
-    price: "¥5,980",
-    code: "SH-RC-GT02",
+    material: "打孔真皮 / 碳纖維",
+    price: "NT$23,800",
+    code: "XY-BZ-SU02",
     image: "images/placeholder.svg",
-    desc: "深凹造型 90mm，賽車级 Alcantara，競技快拆接口",
-    specs: ["90mm深凹", "Alcantara", "快拆接口", "320mm"],
-    tags: ["熱銷"]
-  },
-  {
-    id: 3003,
-    name: "甩尾專用深凹方向盤",
-    category: "賽車",
-    brand: "煊怡車改",
-    material: "Alcantara / 碳纖維",
-    price: "¥4,580",
-    code: "SH-RC-DR03",
-    image: "images/placeholder.svg",
-    desc: "甩尾專用深凹設計，顶部碳纖維饰条，快拆系統",
-    specs: ["深凹造型", "碳纖維饰条", "甩尾專用", "330mm"],
-    tags: ["新品", "碳纖維"]
-  },
-  {
-    id: 3004,
-    name: "復古木质賽車方向盤",
-    category: "賽車",
-    brand: "煊怡車改",
-    material: "实木 / 鋁合金",
-    price: "¥3,280",
-    code: "SH-RC-WD04",
-    image: "images/placeholder.svg",
-    desc: "經典老爷车風格，实木外圈+鋁合金辐条，情怀之选",
-    specs: ["实木外圈", "鋁合金辐条", "復古風格", "380mm"],
-    tags: ["限量"]
-  },
-  {
-    id: 3005,
-    name: "方程式快拆競技方向盤",
-    category: "賽車",
-    brand: "煊怡車改",
-    material: "碳纖維",
-    price: "¥8,880",
-    code: "SH-RC-QR05",
-    image: "images/placeholder.svg",
-    desc: "一体化碳纖維盘体，快拆底座，带转速灯模块接口",
-    specs: ["全碳纖維", "快拆系統", "灯光接口", "300mm"],
-    tags: ["碳纖維", "新品"]
-  },
-
-  // ==================== 改裝方向盤 ====================
-  {
-    id: 4001,
-    name: "通用型運動改裝方向盤",
-    category: "改裝",
-    brand: "煊怡車改",
-    material: "PU / 真皮",
-    price: "¥980",
-    code: "SH-MD-UN01",
-    image: "images/placeholder.svg",
-    desc: "入门改裝首选，适配 90% 车型，赠送轉接座一套",
-    specs: ["通用适配", "PU皮革", "轉接座附赠", "350mm"],
-    tags: ["熱銷"]
-  },
-  {
-    id: 4002,
-    name: "BMW M 款改裝方向盤",
-    category: "改裝",
-    brand: "煊怡車改",
-    material: "Nappa真皮 / 碳纖維",
-    price: "¥5,880",
-    code: "SH-MD-BMW02",
-    image: "images/placeholder.svg",
-    desc: "BMW 3/5/M 系列专车專用，保留所有原廠功能按键",
-    specs: ["BMW專用", "M三色缝线", "保留原廠功能", "碳纖飾板"],
-    tags: ["碳纖維", "熱銷"]
-  },
-  {
-    id: 4003,
-    name: "Audi 平底運動改裝方向盤",
-    category: "改裝",
-    brand: "煊怡車改",
-    material: "打孔真皮",
-    price: "¥4,680",
-    code: "SH-MD-AU03",
-    image: "images/placeholder.svg",
-    desc: "Audi A/S/RS 系列专车專用，運動平底，打孔真皮",
-    specs: ["Audi專用", "平底設計", "打孔真皮", "RS標識"],
-    tags: ["新品"]
-  },
-  {
-    id: 4004,
-    name: "賓士 AMG 款改裝方向盤",
-    category: "改裝",
-    brand: "煊怡車改",
-    material: "Nappa真皮 / Alcantara",
-    price: "¥6,280",
-    code: "SH-MD-BZ04",
-    image: "images/placeholder.svg",
-    desc: "Mercedes C/E/S 级专车專用，AMG 運動風格",
-    specs: ["賓士專用", "AMG風格", "Nappa+Alcantara", "加热功能"],
-    tags: ["限量"]
-  },
-  {
-    id: 4005,
-    name: "JDM 日系通用改裝方向盤",
-    category: "改裝",
-    brand: "煊怡車改",
-    material: "Alcantara",
-    price: "¥2,580",
-    code: "SH-MD-JDM05",
-    image: "images/placeholder.svg",
-    desc: "日系 JDM 風格，适配丰田/本田/日产/马自达等主流车型",
-    specs: ["日系通用", "Alcantara", "JDM風格", "360mm"],
+    desc: "GLC/GLE SUV專用運動平底盤，打孔真皮透氣防滑，碳纖飾板點綴",
+    specs: ["平底設計", "打孔真皮", "碳纖飾板", "GLC/GLE專用"],
     tags: ["熱銷", "新品"]
   },
   {
-    id: 4006,
-    name: "特斯拉 Model 3/Y 改裝盘",
-    category: "改裝",
+    id: 3003,
+    name: "賓士 G-Class 越野專用方向盤",
+    category: "賓士",
     brand: "煊怡車改",
-    material: "碳纖維 / 真皮",
-    price: "¥5,680",
-    code: "SH-MD-TS06",
+    material: "Alcantara / 碳纖維",
+    price: "NT$32,800",
+    code: "XY-BZ-GC03",
     image: "images/placeholder.svg",
-    desc: "Tesla Model 3/Y 專用，保留滚轮功能，運動造型",
-    specs: ["特斯拉專用", "保留滚轮", "碳纖維", "D形"],
-    tags: ["碳纖維", "新品", "熱銷"]
+    desc: "G-Class W463A 專用，Alcantara全包裹，越野風格，紅色回正標",
+    specs: ["全Alcantara", "紅色回正標", "碳纖維飾板", "G-Class專用"],
+    tags: ["限量", "碳纖維"]
   },
 
-  // ==================== 方向盤配件 ====================
+  // ==================== 福特 ====================
+  {
+    id: 4001,
+    name: "福特 Focus / Kuga ST-Line 運動方向盤",
+    category: "福特",
+    brand: "煊怡車改",
+    material: "打孔真皮",
+    price: "NT$12,800",
+    code: "XY-FD-ST01",
+    image: "images/placeholder.svg",
+    desc: "Focus/Kuga ST-Line專用，D形平底，打孔真皮，紅色縫線",
+    specs: ["D形平底", "打孔真皮", "紅色縫線", "Focus/Kuga專用"],
+    tags: ["熱銷", "新品"]
+  },
+  {
+    id: 4002,
+    name: "福特 Mustang 碳纖維競技方向盤",
+    category: "福特",
+    brand: "煊怡車改",
+    material: "碳纖維 / Alcantara",
+    price: "NT$22,800",
+    code: "XY-FD-MG02",
+    image: "images/placeholder.svg",
+    desc: "Mustang專用，全碳纖維主體，Alcantara握把，野馬性能風格",
+    specs: ["全碳纖維", "Alcantara", "野馬標識", "Mustang專用"],
+    tags: ["碳纖維", "限量"]
+  },
+  {
+    id: 4003,
+    name: "福特 Ranger 越野運動方向盤",
+    category: "福特",
+    brand: "煊怡車改",
+    material: "真皮 / 碳纖維",
+    price: "NT$14,800",
+    code: "XY-FD-RG03",
+    image: "images/placeholder.svg",
+    desc: "Ranger專用越野風格方向盤，真皮+碳纖混搭，粗獷耐用",
+    specs: ["越野風格", "真皮+碳纖", "Ranger專用", "防滑設計"],
+    tags: ["新品"]
+  },
+
+  // ==================== HONDA ====================
   {
     id: 5001,
-    name: "賽車快拆底座",
-    category: "配件",
+    name: "HONDA Civic / CR-V 碳纖維方向盤",
+    category: "HONDA",
     brand: "煊怡車改",
-    material: "鋁合金",
-    price: "¥1,280",
-    code: "SH-AC-QR01",
+    material: "碳纖維 / 真皮",
+    price: "NT$11,800",
+    code: "XY-HD-CV01",
     image: "images/placeholder.svg",
-    desc: "航空级 7075 鋁合金，通用 6 孔/70mm PCD，快拆结构",
-    specs: ["7075鋁合金", "6孔通用", "快拆结构", "轻量化"],
-    tags: ["熱銷"]
-  },
-  {
-    id: 5002,
-    name: "方向盤轉接座套装",
-    category: "配件",
-    brand: "煊怡車改",
-    material: "鋼材",
-    price: "¥380",
-    code: "SH-AC-AD02",
-    image: "images/placeholder.svg",
-    desc: "多车型轉接座套装，含 6 种规格，适配主流车型",
-    specs: ["6种规格", "鋼材", "安裝螺丝包", "通用"],
-    tags: ["熱銷"]
-  },
-  {
-    id: 5003,
-    name: "Alcantara 方向盤套",
-    category: "配件",
-    brand: "煊怡車改",
-    material: "Alcantara",
-    price: "¥480",
-    code: "SH-AC-CV03",
-    image: "images/placeholder.svg",
-    desc: "专车定制 Alcantara 方向盤套，手工缝制，无需拆盘",
-    specs: ["Alcantara", "定制尺寸", "手工缝制", "免拆安裝"],
-    tags: ["新品", "熱銷"]
-  },
-  {
-    id: 5004,
-    name: "碳纖維換檔拨片",
-    category: "配件",
-    brand: "煊怡車改",
-    material: "碳纖維",
-    price: "¥880",
-    code: "SH-AC-PD04",
-    image: "images/placeholder.svg",
-    desc: "加长款碳纖維換檔拨片，3M 背胶+螺丝双重固定",
-    specs: ["加长設計", "碳纖維", "双固定", "多车适配"],
+    desc: "Civic/CR-V專用，碳纖維飾板+真皮握把，Type-R風格紅標",
+    specs: ["碳纖維飾板", "真皮握把", "Type-R風格", "Civic/CR-V專用"],
     tags: ["碳纖維", "熱銷"]
   },
   {
-    id: 5005,
-    name: "方向盤碳纖維饰板",
-    category: "配件",
+    id: 5002,
+    name: "HONDA Civic Type-R Alcantara 賽車方向盤",
+    category: "HONDA",
     brand: "煊怡車改",
-    material: "碳纖維",
-    price: "¥680",
-    code: "SH-AC-TR05",
+    material: "Alcantara / 碳纖維",
+    price: "NT$19,800",
+    code: "XY-HD-TR02",
     image: "images/placeholder.svg",
-    desc: "替換原廠饰板，真碳纖維，多车型可选，免工具安裝",
-    specs: ["真碳纖維", "替換安裝", "多车型", "3K斜纹"],
+    desc: "Civic Type-R FK8/FL5專用，全Alcantara包裹，紅色縫線，賽道利器",
+    specs: ["全Alcantara", "紅色縫線", "碳纖飾板", "Type-R專用"],
+    tags: ["碳纖維", "限量", "熱銷"]
+  },
+  {
+    id: 5003,
+    name: "HONDA Odyssey / HR-V 豪華真皮方向盤",
+    category: "HONDA",
+    brand: "煊怡車改",
+    material: "Nappa真皮",
+    price: "NT$10,800",
+    code: "XY-HD-OD03",
+    image: "images/placeholder.svg",
+    desc: "Odyssey/HR-V專用，Nappa真皮手工縫製，家庭舒適升級",
+    specs: ["Nappa真皮", "手工縫線", "加熱功能", "Odyssey/HR-V專用"],
+    tags: ["新品"]
+  },
+
+  // ==================== 馬自達 ====================
+  {
+    id: 6001,
+    name: "馬自達 Mazda3 / CX-5 碳纖維運動方向盤",
+    category: "馬自達",
+    brand: "煊怡車改",
+    material: "碳纖維 / 真皮",
+    price: "NT$12,800",
+    code: "XY-MZ-CX01",
+    image: "images/placeholder.svg",
+    desc: "Mazda3/CX-5/CX-30專用，碳纖維飾板，D形平底，魂動紅縫線",
+    specs: ["D形平底", "碳纖維飾板", "魂動紅縫線", "Mazda3/CX-5專用"],
+    tags: ["碳纖維", "熱銷"]
+  },
+  {
+    id: 6002,
+    name: "馬自達 MX-5 賽車輕量化方向盤",
+    category: "馬自達",
+    brand: "煊怡車改",
+    material: "Alcantara / 碳纖維",
+    price: "NT$18,800",
+    code: "XY-MZ-MX02",
+    image: "images/placeholder.svg",
+    desc: "MX-5 ND專用，超輕量化設計，Alcantara包裹，純粹駕駛樂趣",
+    specs: ["輕量化", "Alcantara", "碳纖飾板", "MX-5 ND專用"],
+    tags: ["碳纖維", "限量"]
+  },
+  {
+    id: 6003,
+    name: "馬自達 CX-9 / CX-90 豪華真皮方向盤",
+    category: "馬自達",
+    brand: "煊怡車改",
+    material: "Nappa真皮",
+    price: "NT$14,800",
+    code: "XY-MZ-CX903",
+    image: "images/placeholder.svg",
+    desc: "CX-9/CX-90旗艦SUV專用，Nappa真皮，加熱功能，豪華升級",
+    specs: ["Nappa真皮", "加熱功能", "豪華縫線", "CX-9/CX-90專用"],
+    tags: ["新品", "熱銷"]
+  },
+
+  // ==================== 奧迪 ====================
+  {
+    id: 7001,
+    name: "奧迪 A4/A6 RS 碳纖維平底方向盤",
+    category: "奧迪",
+    brand: "煊怡車改",
+    material: "碳纖維 / 打孔真皮",
+    price: "NT$24,800",
+    code: "XY-AD-RS01",
+    image: "images/placeholder.svg",
+    desc: "A4/A6/A7 RS專用，碳纖維飾板，打孔真皮，RS運動標識",
+    specs: ["平底設計", "碳纖維飾板", "打孔真皮", "RS標識"],
+    tags: ["碳纖維", "熱銷"]
+  },
+  {
+    id: 7002,
+    name: "奧迪 Q5/Q7 豪華運動方向盤",
+    category: "奧迪",
+    brand: "煊怡車改",
+    material: "Nappa真皮 / 碳纖維",
+    price: "NT$22,800",
+    code: "XY-AD-Q502",
+    image: "images/placeholder.svg",
+    desc: "Q5/Q7/Q8專用，Nappa真皮+碳纖混搭，加熱功能，科技質感",
+    specs: ["Nappa真皮", "碳纖飾板", "加熱功能", "Q5/Q7/Q8專用"],
+    tags: ["新品"]
+  },
+  {
+    id: 7003,
+    name: "奧迪 R8 / RS3 Alcantara 競技方向盤",
+    category: "奧迪",
+    brand: "煊怡車改",
+    material: "Alcantara / 碳纖維",
+    price: "NT$29,800",
+    code: "XY-AD-R803",
+    image: "images/placeholder.svg",
+    desc: "R8/RS3高性能專用，全Alcantara包裹，碳纖維主體，賽道血統",
+    specs: ["全Alcantara", "碳纖維主體", "OLED顯示", "R8/RS3專用"],
+    tags: ["碳纖維", "限量", "熱銷"]
+  },
+
+  // ==================== INFINITI ====================
+  {
+    id: 8001,
+    name: "INFINITI Q50 / QX50 碳纖維運動方向盤",
+    category: "INFINITI",
+    brand: "煊怡車改",
+    material: "碳纖維 / 真皮",
+    price: "NT$16,800",
+    code: "XY-IF-QX01",
+    image: "images/placeholder.svg",
+    desc: "Q50/QX50專用，碳纖維飾板+真皮握把，日系豪華運動風",
+    specs: ["碳纖維飾板", "真皮握把", "D形平底", "Q50/QX50專用"],
     tags: ["碳纖維", "新品"]
   },
   {
-    id: 5006,
-    name: "方向盤回正标贴",
-    category: "配件",
+    id: 8002,
+    name: "INFINITI QX60 / QX80 豪華真皮方向盤",
+    category: "INFINITI",
     brand: "煊怡車改",
-    material: "鋁合金",
-    price: "¥168",
-    code: "SH-AC-MK06",
+    material: "Nappa真皮",
+    price: "NT$18,800",
+    code: "XY-IF-QX602",
     image: "images/placeholder.svg",
-    desc: "12点钟鋁合金回正标，多色可选，賽車風格点缀",
-    specs: ["鋁合金", "多色可选", "3M背胶", "通用"],
+    desc: "QX60/QX80旗艦SUV專用，Nappa真皮，加熱+電動調整，頂級舒適",
+    specs: ["Nappa真皮", "加熱功能", "電動調整", "QX60/QX80專用"],
+    tags: ["熱銷"]
+  },
+  {
+    id: 8003,
+    name: "INFINITI Q60 雙門跑車 Alcantara 方向盤",
+    category: "INFINITI",
+    brand: "煊怡車改",
+    material: "Alcantara / 碳纖維",
+    price: "NT$19,800",
+    code: "XY-IF-Q603",
+    image: "images/placeholder.svg",
+    desc: "Q60雙門跑車專用，Alcantara包裹+碳纖飾板，紅色回正標",
+    specs: ["Alcantara", "碳纖飾板", "紅色回正標", "Q60專用"],
+    tags: ["碳纖維", "限量"]
+  },
+
+  // ==================== 瑪莎拉蒂 ====================
+  {
+    id: 9001,
+    name: "瑪莎拉蒂 Ghibli / Quattroporte 碳纖維方向盤",
+    category: "瑪莎拉蒂",
+    brand: "煊怡車改",
+    material: "碳纖維 / Nappa真皮",
+    price: "NT$38,800",
+    code: "XY-MS-GH01",
+    image: "images/placeholder.svg",
+    desc: "Ghibli/Quattroporte專用，全碳纖維主體，Nappa真皮握把，三叉戟標識",
+    specs: ["全碳纖維", "Nappa真皮", "三叉戟標識", "Ghibli/QP專用"],
+    tags: ["碳纖維", "限量"]
+  },
+  {
+    id: 9002,
+    name: "瑪莎拉蒂 Levante 豪華運動方向盤",
+    category: "瑪莎拉蒂",
+    brand: "煊怡車改",
+    material: "Nappa真皮 / 碳纖維",
+    price: "NT$35,800",
+    code: "XY-MS-LV02",
+    image: "images/placeholder.svg",
+    desc: "Levante SUV專用，義大利Nappa真皮+碳纖混搭，奢華與運動兼備",
+    specs: ["Nappa真皮", "碳纖飾板", "義大利工藝", "Levante專用"],
+    tags: ["碳纖維", "熱銷"]
+  },
+  {
+    id: 9003,
+    name: "瑪莎拉蒂 MC20 賽道競技方向盤",
+    category: "瑪莎拉蒂",
+    brand: "煊怡車改",
+    material: "碳纖維 / Alcantara",
+    price: "NT$48,800",
+    code: "XY-MS-MC03",
+    image: "images/placeholder.svg",
+    desc: "MC20超跑專用，鍛造碳纖維主體，Alcantara包裹，F1賽道科技",
+    specs: ["鍛造碳纖維", "Alcantara", "LED轉速燈", "MC20專用"],
+    tags: ["碳纖維", "限量", "新品"]
+  },
+
+  // ==================== NISSAN ====================
+  {
+    id: 10001,
+    name: "NISSAN X-Trail / Kicks 碳纖維運動方向盤",
+    category: "NISSAN",
+    brand: "煊怡車改",
+    material: "碳纖維 / 真皮",
+    price: "NT$11,800",
+    code: "XY-NS-XT01",
+    image: "images/placeholder.svg",
+    desc: "X-Trail/Kicks專用，碳纖維飾板+真皮握把，D形運動風格",
+    specs: ["D形平底", "碳纖維飾板", "真皮握把", "X-Trail/Kicks專用"],
+    tags: ["熱銷", "新品"]
+  },
+  {
+    id: 10002,
+    name: "NISSAN GT-R 賽道競技方向盤",
+    category: "NISSAN",
+    brand: "煊怡車改",
+    material: "碳纖維 / Alcantara",
+    price: "NT$32,800",
+    code: "XY-NS-GR02",
+    image: "images/placeholder.svg",
+    desc: "GT-R R35專用，全碳纖維主體，Alcantara握把，東瀛戰神專屬",
+    specs: ["全碳纖維", "Alcantara", "GT-R標識", "R35專用"],
+    tags: ["碳纖維", "限量", "熱銷"]
+  },
+  {
+    id: 10003,
+    name: "NISSAN Altima / Teana 豪華真皮方向盤",
+    category: "NISSAN",
+    brand: "煊怡車改",
+    material: "Nappa真皮",
+    price: "NT$9,800",
+    code: "XY-NS-AT03",
+    image: "images/placeholder.svg",
+    desc: "Altima/Teena專用，Nappa真皮手工縫製，舒適升級首選",
+    specs: ["Nappa真皮", "手工縫線", "加熱功能", "Altima專用"],
     tags: ["新品"]
   }
 ];
