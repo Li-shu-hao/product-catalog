@@ -642,4 +642,18 @@ const PRODUCTS = [
   { id: 113, name: "馬自達 方向盤", category: "馬自達", brand: "煊怡車改", price: "NT$0", code: "MZ-015", image: "images/mazda-15.jpg", tags: ["新品"] },
   { id: 114, name: "馬自達 方向盤", category: "馬自達", brand: "煊怡車改", price: "NT$0", code: "MZ-016", image: "images/mazda-16.jpg", tags: ["新品"] },
   { id: 115, name: "馬自達 方向盤", category: "馬自達", brand: "煊怡車改", price: "NT$0", code: "MZ-017", image: "images/mazda-17.jpg", tags: ["新品"] },
+
+  // ==================== 奧迪 ====================
+  { id: 116, name: "奧迪 方向盤", category: "奧迪", brand: "煊怡車改", price: "NT$0", code: "AD-001", image: "images/audi-1.jpg", tags: ["新品"] },
+  { id: 117, name: "奧迪 方向盤", category: "奧迪", brand: "煊怡車改", price: "NT$0", code: "AD-002", image: "images/audi-2.jpg", tags: ["新品"] },
+  { id: 118, name: "奧迪 方向盤", category: "奧迪", brand: "煊怡車改", price: "NT$0", code: "AD-003", image: "images/audi-3.jpg", tags: ["新品"] },
+  { id: 119, name: "奧迪 方向盤", category: "奧迪", brand: "煊怡車改", price: "NT$0", code: "AD-004", image: "images/audi-4.jpg", tags: ["新品"] },
+  { id: 120, name: "奧迪 方向盤", category: "奧迪", brand: "煊怡車改", price: "NT$0", code: "AD-005", image: "images/audi-5.jpg", tags: ["新品"] },
+  { id: 121, name: "奧迪 方向盤", category: "奧迪", brand: "煊怡車改", price: "NT$0", code: "AD-006", image: "images/audi-6.jpg", tags: ["新品"] },
+  { id: 122, name: "奧迪 方向盤", category: "奧迪", brand: "煊怡車改", price: "NT$0", code: "AD-007", image: "images/audi-7.jpg", tags: ["新品"] },
+  { id: 123, name: "奧迪 方向盤", category: "奧迪", brand: "煊怡車改", price: "NT$0", code: "AD-008", image: "images/audi-8.jpg", tags: ["新品"] },
+  { id: 124, name: "奧迪 方向盤", category: "奧迪", brand: "煊怡車改", price: "NT$0", code: "AD-009", image: "images/audi-9.jpg", tags: ["新品"] },
+  { id: 125, name: "奧迪 方向盤", category: "奧迪", brand: "煊怡車改", price: "NT$0", code: "AD-010", image: "images/audi-10.jpg", tags: ["新品"] },
+  { id: 126, name: "奧迪 方向盤", category: "奧迪", brand: "煊怡車改", price: "NT$0", code: "AD-012", image: "images/audi-12.jpg", tags: ["新品"] },
+  { id: 127, name: "奧迪 方向盤", category: "奧迪", brand: "煊怡車改", price: "NT$0", code: "AD-013", image: "images/audi-13.jpg", tags: ["新品"] },
 ];
